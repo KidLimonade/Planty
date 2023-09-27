@@ -1,11 +1,37 @@
 @import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&display=swap');
 
 /* General settings */
-body * {
+body {
     font-family: 'Syne', sans-serif;
+    max-width: 1440px;
+    min-width: 320px;
+    margin: auto;
 }
 
-/* Logo */
+/* Header navigation bar */
+#site-header {
+    background-color: bisque;
+    height: 80px;
+}
+
 .custom-logo {
     height: 19px;
+}
+
+ul.primary-menu {
+    gap: 60px;
+}
+
+li.menu-item a {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19px;
+    color: black !important;
+}
+
+li.menu-item.current-menu-item a,
+li.menu-item a:hover {
+    font-size: 13px;
+    font-weight: 700;
+    text-decoration: none !important;
 }

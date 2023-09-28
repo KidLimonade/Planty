@@ -9,8 +9,7 @@ body {
 }
 
 /* Header navigation bar */
-#site-header {
-    background-color: bisque;
+#site-header > .header-inner {
     height: 80px;
 }
 
@@ -18,14 +17,18 @@ body {
     height: 19px;
 }
 
-ul.primary-menu {
+.site-description {
+    display: none;
+}
+
+.primary-menu {
     gap: 60px;
 }
 
 li.menu-item a {
     font-size: 16px;
     font-weight: 400;
-    line-height: 19px;
+    line-height: 80px;
     color: black !important;
 }
 
@@ -35,3 +38,14 @@ li.menu-item a:hover {
     font-weight: 700;
     text-decoration: none !important;
 }
+
+ul.primary-menu li:last-of-type a {
+    padding: 0px 60px;
+    color: white !important;
+    background-color: #DC9F96;
+}
+
+ul.primary-menu li:last-of-type a:hover {
+    background-color: #C02E44;
+}
+

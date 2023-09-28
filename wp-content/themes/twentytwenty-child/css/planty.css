@@ -49,3 +49,17 @@ ul.primary-menu li:last-of-type a:hover {
     background-color: #C02E44;
 }
 
+/* Footer legal */
+#site-footer > .footer-inner {
+    height: 60px;
+    justify-content: center;
+    align-items: center;
+}
+
+.privacy-policy-link {
+    font-size: 16px;
+    font-weight: 400;
+    color: black !important;
+    text-decoration: none !important;
+}
+

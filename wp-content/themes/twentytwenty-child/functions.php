@@ -19,6 +19,14 @@ function theme_enqueue_styles() {
     );
 }
 
+// Widgets Loading
+require_once(__DIR__ . '/widgets/planty-gout-widget.php');
+
+add_action('widgets_init', 'planty_register_widgets');
+function planty_register_widgets() {
+    register_widget('Planty_Gout_Widget');
+}
+
 /**
  * Manage primary nav menu items according
  * to the WordPress admin login status 

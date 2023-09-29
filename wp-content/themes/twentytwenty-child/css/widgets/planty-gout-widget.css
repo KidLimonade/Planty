@@ -1,0 +1,25 @@
+.planty-gout-widget {
+    display: inline-block;
+    position: relative;
+}
+
+.planty-gout-widget img{
+    width: 393px;
+    height: 262px;
+    object-fit: cover;
+}
+
+.planty-gout-widget .title {
+    position:absolute;
+    z-index: 10;
+    top:0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 800;
+    text-transform: uppercase;
+    color:white;
+}

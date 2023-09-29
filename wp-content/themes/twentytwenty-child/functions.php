@@ -17,6 +17,14 @@ function theme_enqueue_styles() {
         array(),
         filemtime(get_stylesheet_directory() . '/css/planty.css')
     );
+
+    // Load planty-gout-widget css file
+    wp_enqueue_style(
+        'planty-gout-widget-style',
+        get_stylesheet_directory_uri() . '/css/widgets/planty-gout-widget.css',
+        array(),
+        filemtime(get_stylesheet_directory() . '/css/widgets/planty-gout-widget.css')
+    );
 }
 
 // Widgets Loading

@@ -1,0 +1,37 @@
+{
+    "version": 1,
+    "settings": {
+        "color": {
+            "palette": [
+                {   "name": "Rose Titre",
+                    "slug": "rose-titre",
+                    "color": "#D2776A"
+                },
+                {   "name": "Verdure",
+                    "slug": "verdure",
+                    "color": "#3B8E46"
+                },
+                {   "name": "Sable",
+                    "slug": "sable",
+                    "color": "#ECE2DA"
+                },
+                {   "name": "Ombre",
+                    "slug": "ombre",
+                    "color": "#E3D9D0"
+                },
+                {   "name": "Saumon",
+                    "slug": "saumon",
+                    "color": "#DC9F96"
+                },
+                {   "name": "Rosé Provence",
+                    "slug": "rose-provence",
+                    "color": "#E0B9B4"
+                },
+                {   "name": "Clairet",
+                    "slug": "clairet",
+                    "color": "#C02E44"
+                }
+            ]
+        }
+    }
+}

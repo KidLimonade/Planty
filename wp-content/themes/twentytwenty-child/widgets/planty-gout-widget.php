@@ -40,7 +40,7 @@ class Planty_Gout_Widget extends WP_Widget {
     public function form($instance) {
         if (isset($instance[ 'title' ])) {
             $title = $instance[ 'title' ];
-        } else { $title = "Insipide"; }
+        } else { $title = ""; }
         if (isset($instance[ 'text_size' ])) {
             $textSize = $instance[ 'text_size' ];
         } else { $textSize = "20"; }

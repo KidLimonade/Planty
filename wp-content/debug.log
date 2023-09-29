@@ -37,3 +37,18 @@ Stack trace:
 [29-Sep-2023 18:15:04 UTC] PHP Notice:  Undefined index: title in /Applications/MAMP/htdocs/Planty/wp-content/themes/twentytwenty-child/widgets/planty-gout-widget.php on line 15
 [29-Sep-2023 18:15:04 UTC] PHP Notice:  Undefined index: text_size in /Applications/MAMP/htdocs/Planty/wp-content/themes/twentytwenty-child/widgets/planty-gout-widget.php on line 16
 [29-Sep-2023 18:15:04 UTC] PHP Notice:  Undefined index: url_image in /Applications/MAMP/htdocs/Planty/wp-content/themes/twentytwenty-child/widgets/planty-gout-widget.php on line 17
+[29-Sep-2023 18:30:45 UTC] PHP Notice:  Undefined index: title in /Applications/MAMP/htdocs/Planty/wp-content/themes/twentytwenty-child/widgets/planty-gout-widget.php on line 15
+[29-Sep-2023 18:30:45 UTC] PHP Notice:  Undefined index: text_size in /Applications/MAMP/htdocs/Planty/wp-content/themes/twentytwenty-child/widgets/planty-gout-widget.php on line 16
+[29-Sep-2023 18:30:45 UTC] PHP Notice:  Undefined index: url_image in /Applications/MAMP/htdocs/Planty/wp-content/themes/twentytwenty-child/widgets/planty-gout-widget.php on line 17
+[29-Sep-2023 18:31:56 UTC] PHP Notice:  Undefined index: title in /Applications/MAMP/htdocs/Planty/wp-content/themes/twentytwenty-child/widgets/planty-gout-widget.php on line 15
+[29-Sep-2023 18:31:56 UTC] PHP Notice:  Undefined index: text_size in /Applications/MAMP/htdocs/Planty/wp-content/themes/twentytwenty-child/widgets/planty-gout-widget.php on line 16
+[29-Sep-2023 18:31:56 UTC] PHP Notice:  Undefined index: url_image in /Applications/MAMP/htdocs/Planty/wp-content/themes/twentytwenty-child/widgets/planty-gout-widget.php on line 17
+[29-Sep-2023 18:37:25 UTC] PHP Notice:  Undefined index: title in /Applications/MAMP/htdocs/Planty/wp-content/themes/twentytwenty-child/widgets/planty-gout-widget.php on line 15
+[29-Sep-2023 18:37:25 UTC] PHP Notice:  Undefined index: text_size in /Applications/MAMP/htdocs/Planty/wp-content/themes/twentytwenty-child/widgets/planty-gout-widget.php on line 16
+[29-Sep-2023 18:37:25 UTC] PHP Notice:  Undefined index: url_image in /Applications/MAMP/htdocs/Planty/wp-content/themes/twentytwenty-child/widgets/planty-gout-widget.php on line 17
+[29-Sep-2023 19:25:12 UTC] PHP Parse error:  syntax error, unexpected '}' in /Applications/MAMP/htdocs/Planty/wp-content/themes/twentytwenty-child/functions.php on line 88
+[29-Sep-2023 19:25:12 UTC] PHP Notice:  Trying to access array offset on value of type bool in /Applications/MAMP/htdocs/Planty/wp-includes/class-wp-recovery-mode-email-service.php on line 367
+[29-Sep-2023 19:25:12 UTC] PHP Notice:  Trying to access array offset on value of type bool in /Applications/MAMP/htdocs/Planty/wp-includes/class-wp-recovery-mode-email-service.php on line 368
+[29-Sep-2023 20:21:46 UTC] PHP Notice:  Undefined index: utl in /Applications/MAMP/htdocs/Planty/wp-content/themes/twentytwenty-child/functions.php on line 106
+[29-Sep-2023 20:21:50 UTC] PHP Notice:  Undefined index: utl in /Applications/MAMP/htdocs/Planty/wp-content/themes/twentytwenty-child/functions.php on line 106
+[29-Sep-2023 20:22:47 UTC] PHP Notice:  Undefined index: utl in /Applications/MAMP/htdocs/Planty/wp-content/themes/twentytwenty-child/functions.php on line 106

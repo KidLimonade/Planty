@@ -25,6 +25,14 @@ function theme_enqueue_styles() {
         array(),
         filemtime(get_stylesheet_directory() . '/css/widgets/planty-gout-widget.css')
     );
+
+    // Load planty-gout-shortcode css file
+    wp_enqueue_style(
+        'planty-gout-shortcode-style',
+        get_stylesheet_directory_uri() . '/css/shortcodes/planty-gout-shortcode.css',
+        array(),
+        filemtime(get_stylesheet_directory() . '/css/shortcodes/planty-gout-shortcode.css')
+    );
 }
 
 // Widgets Loading
@@ -68,4 +76,49 @@ function planty_header_nav_menu($items, $args) {
     }
     
     return $items;
+}
+
+/**
+ * Shortcode dedicated to present an image
+ * of fruits and the name of the flavour
+ */
+add_shortcode('planty-gout-shortcode', 'planty_gout_cover');
+function planty_gout_cover($atts) {
+
+    // Get the user attributes
+    $atts = shortcode_atts(
+        array(
+            'url' => '',
+            'title' => '',
+            'size' =>  '48',
+            'width' => '393',
+            'height' => '262'
+        ), $atts, 'planty-gout-shortcode'
+    );
+
+    // Start buffering output flow
+    ob_start();
+
+    if ($atts['url'] != '') {
+        ?>
+        <div class="planty-gout-shortcode">
+            <img 
+                src="<?= $atts['url'] ?>" 
+                alt="<?= $atts['title'] ?>"
+                style="
+                    width: <?= $atts['width'] ?>px;
+                    height: <?= $atts['height'] ?>px;">
+            <div class="title"
+                style="font-size: <?= $atts['size'] ?>px;">
+                <?= $atts['title'] ?>
+            </div>
+        </div>
+        <?php
+    }
+
+    // Get the buffered output flow and clean
+    $output = ob_get_contents();
+    ob_end_clean();
+
+    return $output;
 }

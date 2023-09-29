@@ -1,15 +1,13 @@
-.planty-gout-widget {
+.planty-gout-shortcode {
     display: inline-block;
     position: relative;
 }
 
-.planty-gout-widget img{
-    width: 393px;
-    height: 262px;
+.planty-gout-shortcode img{
     object-fit: cover;
 }
 
-.planty-gout-widget .title {
+.planty-gout-shortcode .title {
     position:absolute;
     z-index: 10;
     inset: 0 0 0 0;

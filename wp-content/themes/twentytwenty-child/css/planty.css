@@ -13,6 +13,10 @@ body {
     text-align: center;
 }
 
+main article header.entry-header {
+    display: none;
+}
+
 /* Header navigation bar */
 #site-header > .header-inner {
     height: 80px;
@@ -26,31 +30,37 @@ body {
     display: none;
 }
 
-.primary-menu {
-    gap: 60px;
+ul.primary-menu {
+    align-items: center;
+    gap: 40px;
 }
 
 li.menu-item a {
     font-size: 16px;
     font-weight: 400;
-    line-height: 80px;
     color: black !important;
+    transition: none;
 }
 
-li.menu-item.current-menu-item a,
-li.menu-item a:hover {
+li.menu-item a:hover,
+li.menu-item.current-menu-item a {
     font-size: 13px;
     font-weight: 700;
     text-decoration: none !important;
+    transition: none;
 }
 
-ul.primary-menu li:last-of-type a {
-    padding: 0px 60px;
+.primary-menu li:last-of-type a {
+    line-height: 80px;
+    padding-left: 61px;
+    padding-right: 61px;
+    font-size: 16px;
+    font-weight: 400;
     color: white !important;
     background-color: #DC9F96;
 }
 
-ul.primary-menu li:last-of-type a:hover {
+.primary-menu li:last-of-type a:hover {
     background-color: #C02E44;
 }
 

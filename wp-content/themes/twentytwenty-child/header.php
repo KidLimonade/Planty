@@ -73,9 +73,7 @@
 							<span class="toggle-icon">
 								<?php twentytwenty_the_theme_svg( 'ellipsis' ); ?>
 							</span>
-							<!-- No text menu for toggle icon
-                                <span class="toggle-text"><?php _e( 'Menu', 'twentytwenty' ); ?></span> 
-                            -->
+							<span class="toggle-text"><?php _e( 'Menu', 'twentytwenty' ); ?></span>
 						</span>
 					</button><!-- .nav-toggle -->
 

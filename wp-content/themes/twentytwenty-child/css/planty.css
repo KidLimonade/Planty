@@ -77,16 +77,17 @@ li.menu-item.current-menu-item a {
 /*
  * FOOTER SETTINGS
 */
-#site-footer > .footer-inner {
+#site-footer.header-footer-group {
+    margin: 0;
     height: 60px;
+    border: none;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .privacy-policy {
-    margin-top: 0;
-    margin-bottom: 0;
+    margin: 0;
 }
 
 .privacy-policy-link {
@@ -94,5 +95,10 @@ li.menu-item.current-menu-item a {
     font-weight: 400;
     color: var(--main-color) !important;
     text-decoration: none !important;
+}
+
+.privacy-policy-link:hover {
+    font-size: 13px;
+    font-weight: 700;
 }
 

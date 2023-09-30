@@ -1,6 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&display=swap');
 
-/* General settings */
+/*
+ * GENERAL SETTINGS
+*/
+
+:root {
+    --main-color: #000;
+    --main-bg-color: #FFF;
+    --clairet-color: #C02E44;
+    --saumon-color: #DC9F96;
+}
 
 * {
     font-family: 'Syne', sans-serif;
@@ -19,14 +28,16 @@ main article header.entry-header,
     display: none;
 }
 
-/* Header navigation bar */
+/*
+ * HEADER SETTINGS
+*/
+
 #site-header > .header-inner {
     height: 80px;
+    padding: 31px 0 30px 0;
 }
 
 .custom-logo {
-    display: inline-block;
-    width: 201px;
     height: 19px;
 }
 
@@ -38,7 +49,8 @@ ul.primary-menu {
 li.menu-item a {
     font-size: 16px;
     font-weight: 400;
-    color: black !important;
+    color: var(--main-color) !important;
+    text-decoration: none !important;
     transition: none;
 }
 
@@ -46,35 +58,41 @@ li.menu-item a:hover,
 li.menu-item.current-menu-item a {
     font-size: 13px;
     font-weight: 700;
-    text-decoration: none !important;
     transition: none;
 }
 
 .primary-menu li:last-of-type a {
-    line-height: 80px;
-    padding-left: 61px;
-    padding-right: 61px;
     font-size: 16px;
     font-weight: 700;
-    color: white !important;
-    background-color: #DC9F96;
+    line-height: 80px;
+    padding: 0 61px;
+    color: var(--main-bg-color) !important;
+    background-color: var(--saumon-color);
 }
 
 .primary-menu li:last-of-type a:hover {
-    background-color: #C02E44;
+    background-color: var(--clairet-color);
 }
 
-/* Footer legal */
+/*
+ * FOOTER SETTINGS
+*/
 #site-footer > .footer-inner {
     height: 60px;
+    display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.privacy-policy {
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
 .privacy-policy-link {
     font-size: 16px;
     font-weight: 400;
-    color: black !important;
+    color: var(--main-color) !important;
     text-decoration: none !important;
 }
 

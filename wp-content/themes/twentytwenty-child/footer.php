@@ -1,20 +1,14 @@
 <?php
 /**
- * The template for displaying the footer
+ * Planty code for displaying the footer
  *
  * Contains the opening of the #site-footer div and all content after.
- *
- * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
- *
- * @package WordPress
- * @subpackage Twenty_Twenty
- * @since Twenty Twenty 1.0
  */
 
 ?>
 			<footer id="site-footer" class="header-footer-group">
 
-				<div class="footer-inner section-inner">
+				<div class="footer-inner">
 
 					<?php
 					if ( function_exists( 'the_privacy_policy_link' ) ) {
@@ -28,7 +22,7 @@
                     }
 					?>
 
-				</div><!-- .section-inner -->
+				</div><!-- .footer-inner -->
 
 			</footer><!-- #site-footer -->
 

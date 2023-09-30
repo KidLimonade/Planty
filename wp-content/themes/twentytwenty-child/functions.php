@@ -101,13 +101,13 @@ function planty_gout_cover($atts) {
 
     if ($atts['url'] != '') {
         ?>
-        <div class="planty-gout-shortcode">
+        <div class="planty-gout-shortcode"
+            style="
+                width: <?= $atts['width'] ?>px;
+                height: <?= $atts['height'] ?>px;">
             <img 
                 src="<?= $atts['url'] ?>" 
-                alt="<?= $atts['title'] ?>"
-                style="
-                    width: <?= $atts['width'] ?>px;
-                    height: <?= $atts['height'] ?>px;">
+                alt="<?= $atts['title'] ?>">
             <div class="title"
                 style="font-size: <?= $atts['size'] ?>px;">
                 <?= $atts['title'] ?>

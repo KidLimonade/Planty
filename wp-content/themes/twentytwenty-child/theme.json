@@ -30,6 +30,14 @@
                 {   "name": "Clairet",
                     "slug": "clairet",
                     "color": "#C02E44"
+                },
+                {   "name": "Blanc",
+                    "slug": "planty-blanc",
+                    "color": "#FFFFFF"
+                },
+                {   "name": "Noir",
+                    "slug": "planty-noir",
+                    "color": "#000000"
                 }
             ]
         }

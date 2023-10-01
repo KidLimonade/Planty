@@ -9,6 +9,8 @@
     --main-bg-color: #FFF;
     --clairet-color: #C02E44;
     --saumon-color: #DC9F96;
+    --rose-provence-color: #E0B9B4;
+    --sable-color: #ECE2DA;
 }
 
 * {
@@ -22,15 +24,43 @@ body {
     text-align: center;
 }
 
+main {
+    background-color: var(--sable-color);
+}
+
+/* Planty custom button */
+
+.wp-block-button__link.wp-element-button,
+.wpcf7-form-control.wpcf7-submit {
+    font-size: 15px;
+    color: var(--main-bg-color);
+    line-height: 37px;
+    padding: 9px 56px;
+    border-radius: 5px;
+    background-color: var(--rose-provence-color);
+    text-transform: none;
+    text-decoration: none;
+}
+
+.wp-block-button__link.wp-element-button:hover,
+.wpcf7-form-control.wpcf7-submit:hover {
+    background-color: var(--clairet-color);
+    text-decoration: none;
+}
+
+/*
+ * HEADER SETTINGS
+*/
+
+/* Parent theme simplification */
+
 main article header.entry-header,
 .site-description,
 .toggle-text {
     display: none;
 }
 
-/*
- * HEADER SETTINGS
-*/
+/* Child theme customization */
 
 #site-header > .header-inner {
     height: 80px;
@@ -77,6 +107,9 @@ li.menu-item.current-menu-item a {
 /*
  * FOOTER SETTINGS
 */
+
+/* Child theme customization */
+
 #site-footer.header-footer-group {
     margin: 0;
     height: 60px;
@@ -102,3 +135,44 @@ li.menu-item.current-menu-item a {
     font-weight: 700;
 }
 
+/*
+ * MAIN PAGE STYLE
+*/
+
+/* Cover image */
+
+.feuilles-canette {
+    position: relative;
+    height: 618px;
+    gap: 0;
+}
+
+.feuilles-canette::before {
+    content: '';
+    background: url('http://localhost:8888/Planty/wp-content/uploads/2023/10/canette.png') 
+        no-repeat center center/cover;
+    position: absolute;
+    width: 387px;
+    top: 0;
+    bottom: 60px;
+    z-index: 10;
+}
+
+.energie-plantes {
+    padding: 0 300px;
+    background-color: var(--main-bg-color);
+}
+
+.gouts-boissons {
+    width: 80%;
+}
+
+.temoignages {
+    margin: 0;
+    padding: 10px;
+    background-color: var(--main-bg-color);
+}
+
+.temoignage {
+    width: 370px;
+}

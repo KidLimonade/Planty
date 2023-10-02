@@ -90,7 +90,7 @@ function planty_gout_cover($atts) {
         array(
             'url' => '',
             'title' => '',
-            'size' =>  '48',
+            'size' =>  '2.4',
             'width' => '393',
             'height' => '262'
         ), $atts, 'planty-gout-shortcode'
@@ -109,7 +109,7 @@ function planty_gout_cover($atts) {
                 src="<?= $atts['url'] ?>" 
                 alt="<?= $atts['title'] ?>">
             <div class="title"
-                style="font-size: <?= $atts['size'] ?>px;">
+                style="font-size: <?= $atts['size'] ?>em;">
                 <?= $atts['title'] ?>
             </div>
         </div>

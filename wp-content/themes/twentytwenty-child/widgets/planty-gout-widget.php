@@ -26,7 +26,7 @@ class Planty_Gout_Widget extends WP_Widget {
                     alt="<?= $title ?>"
                 >
                 <div class="title"
-                    style="font-size: <?= $textSize ?>px;"
+                    style="font-size: <?= $textSize ?>em;"
                 >
                     <?= $title ?>
                 </div>
@@ -43,7 +43,7 @@ class Planty_Gout_Widget extends WP_Widget {
         } else { $title = ""; }
         if (isset($instance[ 'text_size' ])) {
             $textSize = $instance[ 'text_size' ];
-        } else { $textSize = "20"; }
+        } else { $textSize = "1"; }
         if (isset($instance[ 'url_image' ])) {
             $urlImage = $instance[ 'url_image' ];
         } else { $urlImage = ""; }
@@ -63,7 +63,7 @@ class Planty_Gout_Widget extends WP_Widget {
         <p>
             <label 
                 for="<?= $this->get_field_name('text_size'); ?>">
-                Taille du texte
+                Taille du texte (en em)
             </label>
             <input class="widefat" 
                 id="<?= $this->get_field_id('text_size'); ?>" 

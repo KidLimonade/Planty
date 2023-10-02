@@ -18,14 +18,12 @@
 }
 
 body {
+    font-family: 'Syne', sans-serif !important;
     max-width: 1440px;
     min-width: 320px;
     margin: auto;
+    /* Main text elements are centered */
     text-align: center;
-}
-
-main {
-    background-color: var(--sable-color);
 }
 
 /* Planty custom button */
@@ -44,7 +42,6 @@ main {
 
 .wp-block-button__link.wp-element-button:hover,
 .wpcf7-form-control.wpcf7-submit:hover {
-    background-color: var(--clairet-color);
     text-decoration: none;
 }
 
@@ -52,7 +49,7 @@ main {
  * HEADER SETTINGS
 */
 
-/* Parent theme simplification */
+/* Twenty Twenty theme simplification */
 
 main article header.entry-header,
 .site-description,
@@ -64,7 +61,7 @@ main article header.entry-header,
 
 #site-header > .header-inner {
     height: 80px;
-    padding: 31px 0 30px 0;
+    padding: 30px 0 31px 0;
 }
 
 .custom-logo {
@@ -73,34 +70,43 @@ main article header.entry-header,
 
 ul.primary-menu {
     align-items: center;
-    gap: 40px;
+    gap: 30px;
 }
 
 li.menu-item a {
     font-size: 16px;
     font-weight: 400;
+    letter-spacing: 0;
     color: var(--main-color) !important;
     text-decoration: none !important;
-    transition: none;
 }
 
 li.menu-item a:hover,
 li.menu-item.current-menu-item a {
     font-size: 13px;
     font-weight: 700;
-    transition: none;
+    letter-spacing: 0;
 }
 
 .primary-menu li:last-of-type a {
     font-size: 16px;
     font-weight: 700;
+    letter-spacing: 0;
     line-height: 80px;
-    padding: 0 61px;
+    padding-left: 60px;
+    padding-right: 20px;
     color: var(--main-bg-color) !important;
-    background-color: var(--saumon-color);
 }
 
-.primary-menu li:last-of-type a:hover {
+.primary-menu li:last-of-type a::before {
+    content: '';
+    background-color: var(--saumon-color);
+    position: absolute;
+    top: 0; right: -40px; bottom: 0; left: 0;
+    z-index: -10;
+}
+
+.primary-menu li:last-of-type a:hover:before {
     background-color: var(--clairet-color);
 }
 
@@ -112,7 +118,7 @@ li.menu-item.current-menu-item a {
 
 #site-footer.header-footer-group {
     margin: 0;
-    height: 60px;
+    height: 60px; /* BUG HAUTEUR EN BOIS */
     border: none;
     display: flex;
     justify-content: center;
@@ -149,8 +155,7 @@ li.menu-item.current-menu-item a {
 
 .feuilles-canette::before {
     content: '';
-    background: url('http://localhost:8888/Planty/wp-content/uploads/2023/10/canette.png') 
-        no-repeat center center/cover;
+    background: url('../img/canette.png');
     position: absolute;
     width: 387px;
     top: 0;
@@ -160,7 +165,6 @@ li.menu-item.current-menu-item a {
 
 .energie-plantes {
     padding: 0 300px;
-    background-color: var(--main-bg-color);
 }
 
 .gouts-boissons {
@@ -170,9 +174,13 @@ li.menu-item.current-menu-item a {
 .temoignages {
     margin: 0;
     padding: 10px;
-    background-color: var(--main-bg-color);
 }
 
 .temoignage {
     width: 370px;
 }
+
+.full-width-block {
+    background-color: var(--sable-color);
+}
+

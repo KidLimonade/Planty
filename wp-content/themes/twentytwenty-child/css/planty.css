@@ -11,6 +11,7 @@
     --saumon-color: #DC9F96;
     --rose-provence-color: #E0B9B4;
     --sable-color: #ECE2DA;
+    --verdure-color: #3B8E46;
 }
 
 * {
@@ -30,18 +31,18 @@ body {
 
 .wp-block-button__link.wp-element-button,
 .wpcf7-form-control.wpcf7-submit {
-    font-size: 15px;
+        font-size: 15px;
     color: var(--main-bg-color);
     line-height: 37px;
     padding: 9px 56px;
     border-radius: 5px;
     background-color: var(--rose-provence-color);
-    text-transform: none;
-    text-decoration: none;
+    text-decoration: none !important;
 }
 
 .wp-block-button__link.wp-element-button:hover,
 .wpcf7-form-control.wpcf7-submit:hover {
+    background-color: var(--clairet-color);
     text-decoration: none;
 }
 
@@ -163,6 +164,9 @@ li.menu-item.current-menu-item a {
     z-index: 10;
 }
 
+/* Pages */
+
+/*
 .energie-plantes {
     padding: 0 300px;
 }
@@ -183,4 +187,16 @@ li.menu-item.current-menu-item a {
 .full-width-block {
     background-color: var(--sable-color);
 }
+*/
 
+.sand-block {
+    background-color: var(--sable-color);
+}
+
+.white-block {
+    background-color: var(--main-bg-color);
+}
+
+.green-block {
+    background-color: var(--verdure-color);
+}

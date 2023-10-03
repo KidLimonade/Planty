@@ -55,3 +55,29 @@ Stack trace:
 [30-Sep-2023 07:50:10 UTC] PHP Notice:  Undefined index: title in /Applications/MAMP/htdocs/Planty/wp-content/themes/twentytwenty-child/widgets/planty-gout-widget.php on line 15
 [30-Sep-2023 07:50:10 UTC] PHP Notice:  Undefined index: text_size in /Applications/MAMP/htdocs/Planty/wp-content/themes/twentytwenty-child/widgets/planty-gout-widget.php on line 16
 [30-Sep-2023 07:50:10 UTC] PHP Notice:  Undefined index: url_image in /Applications/MAMP/htdocs/Planty/wp-content/themes/twentytwenty-child/widgets/planty-gout-widget.php on line 17
+[03-Oct-2023 17:56:44 UTC] PHP Notice:  Undefined variable: lenu_items in /Applications/MAMP/htdocs/Planty/wp-content/themes/twentytwenty-child/functions.php on line 62
+[03-Oct-2023 17:56:44 UTC] PHP Notice:  Trying to access array offset on value of type null in /Applications/MAMP/htdocs/Planty/wp-content/themes/twentytwenty-child/functions.php on line 62
+[03-Oct-2023 17:56:44 UTC] PHP Notice:  Undefined variable: site_url in /Applications/MAMP/htdocs/Planty/wp-content/themes/twentytwenty-child/functions.php on line 68
+[03-Oct-2023 17:56:44 UTC] PHP Notice:  Undefined variable: lenu_items in /Applications/MAMP/htdocs/Planty/wp-content/themes/twentytwenty-child/functions.php on line 62
+[03-Oct-2023 17:56:44 UTC] PHP Notice:  Trying to access array offset on value of type null in /Applications/MAMP/htdocs/Planty/wp-content/themes/twentytwenty-child/functions.php on line 62
+[03-Oct-2023 17:56:44 UTC] PHP Notice:  Undefined variable: site_url in /Applications/MAMP/htdocs/Planty/wp-content/themes/twentytwenty-child/functions.php on line 68
+[03-Oct-2023 17:57:37 UTC] PHP Notice:  Undefined variable: lenu_items in /Applications/MAMP/htdocs/Planty/wp-content/themes/twentytwenty-child/functions.php on line 62
+[03-Oct-2023 17:57:37 UTC] PHP Notice:  Trying to access array offset on value of type null in /Applications/MAMP/htdocs/Planty/wp-content/themes/twentytwenty-child/functions.php on line 62
+[03-Oct-2023 17:57:37 UTC] PHP Notice:  Undefined variable: site_url in /Applications/MAMP/htdocs/Planty/wp-content/themes/twentytwenty-child/functions.php on line 68
+[03-Oct-2023 17:57:37 UTC] PHP Notice:  Undefined variable: lenu_items in /Applications/MAMP/htdocs/Planty/wp-content/themes/twentytwenty-child/functions.php on line 62
+[03-Oct-2023 17:57:37 UTC] PHP Notice:  Trying to access array offset on value of type null in /Applications/MAMP/htdocs/Planty/wp-content/themes/twentytwenty-child/functions.php on line 62
+[03-Oct-2023 17:57:37 UTC] PHP Notice:  Undefined variable: site_url in /Applications/MAMP/htdocs/Planty/wp-content/themes/twentytwenty-child/functions.php on line 68
+[03-Oct-2023 17:57:39 UTC] PHP Notice:  Undefined variable: lenu_items in /Applications/MAMP/htdocs/Planty/wp-content/themes/twentytwenty-child/functions.php on line 62
+[03-Oct-2023 17:57:39 UTC] PHP Notice:  Trying to access array offset on value of type null in /Applications/MAMP/htdocs/Planty/wp-content/themes/twentytwenty-child/functions.php on line 62
+[03-Oct-2023 17:57:39 UTC] PHP Notice:  Undefined variable: site_url in /Applications/MAMP/htdocs/Planty/wp-content/themes/twentytwenty-child/functions.php on line 68
+[03-Oct-2023 17:57:39 UTC] PHP Notice:  Undefined variable: lenu_items in /Applications/MAMP/htdocs/Planty/wp-content/themes/twentytwenty-child/functions.php on line 62
+[03-Oct-2023 17:57:39 UTC] PHP Notice:  Trying to access array offset on value of type null in /Applications/MAMP/htdocs/Planty/wp-content/themes/twentytwenty-child/functions.php on line 62
+[03-Oct-2023 17:57:39 UTC] PHP Notice:  Undefined variable: site_url in /Applications/MAMP/htdocs/Planty/wp-content/themes/twentytwenty-child/functions.php on line 68
+[03-Oct-2023 17:58:50 UTC] PHP Notice:  Undefined variable: site_url in /Applications/MAMP/htdocs/Planty/wp-content/themes/twentytwenty-child/functions.php on line 68
+[03-Oct-2023 17:58:50 UTC] PHP Notice:  Undefined variable: site_url in /Applications/MAMP/htdocs/Planty/wp-content/themes/twentytwenty-child/functions.php on line 68
+[03-Oct-2023 18:00:06 UTC] PHP Notice:  Undefined variable: site_url in /Applications/MAMP/htdocs/Planty/wp-content/themes/twentytwenty-child/functions.php on line 68
+[03-Oct-2023 18:00:06 UTC] PHP Notice:  Undefined variable: site_url in /Applications/MAMP/htdocs/Planty/wp-content/themes/twentytwenty-child/functions.php on line 68
+[03-Oct-2023 18:00:08 UTC] PHP Notice:  Undefined variable: site_url in /Applications/MAMP/htdocs/Planty/wp-content/themes/twentytwenty-child/functions.php on line 68
+[03-Oct-2023 18:00:08 UTC] PHP Notice:  Undefined variable: site_url in /Applications/MAMP/htdocs/Planty/wp-content/themes/twentytwenty-child/functions.php on line 68
+[03-Oct-2023 18:00:09 UTC] PHP Notice:  Undefined variable: site_url in /Applications/MAMP/htdocs/Planty/wp-content/themes/twentytwenty-child/functions.php on line 68
+[03-Oct-2023 18:00:09 UTC] PHP Notice:  Undefined variable: site_url in /Applications/MAMP/htdocs/Planty/wp-content/themes/twentytwenty-child/functions.php on line 68

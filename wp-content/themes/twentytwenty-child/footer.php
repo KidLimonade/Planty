@@ -1,8 +1,6 @@
 <?php
 /**
 * Planty code displaying the footer
-*
-* Contains the opening of the #site-footer div and all content after.
 */
 
 ?>

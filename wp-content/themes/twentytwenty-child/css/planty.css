@@ -46,17 +46,31 @@ body {
     text-decoration: none;
 }
 
-/*
-* HEADER SETTINGS
-*/
-
-/* Twenty Twenty theme simplification */
+/* Twenty Twenty theme & plugins simplification */
 
 main article header.entry-header,
 .site-description,
-.toggle-text {
+.toggle-text,
+.wpcf7-spinner {
     display: none;
 }
+
+/*
+* HEADER & FOOTER SETTINGS
+*/
+
+li.menu-item a,
+.privacy-policy-link {
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 0;
+    color: var(--main-color) !important;
+    text-decoration: none !important;
+}
+
+/*
+* HEADER SETTINGS
+*/
 
 /* Child theme customization */
 
@@ -72,14 +86,6 @@ main article header.entry-header,
 ul.primary-menu {
     align-items: center;
     gap: 30px;
-}
-
-li.menu-item a {
-    font-size: 16px;
-    font-weight: 400;
-    letter-spacing: 0;
-    color: var(--main-color) !important;
-    text-decoration: none !important;
 }
 
 li.menu-item a:hover,
@@ -119,7 +125,7 @@ li.menu-item.current-menu-item a {
 
 #site-footer.header-footer-group {
     margin: 0;
-    height: 60px; /* BUG HAUTEUR EN BOIS */
+    height: 60px;
     border: none;
     display: flex;
     justify-content: center;
@@ -130,16 +136,10 @@ li.menu-item.current-menu-item a {
     margin: 0;
 }
 
-.privacy-policy-link {
-    font-size: 16px;
-    font-weight: 400;
-    color: var(--main-color) !important;
-    text-decoration: none !important;
-}
-
 .privacy-policy-link:hover {
     font-size: 13px;
     font-weight: 700;
+    letter-spacing: 0;
 }
 
 /*
@@ -189,20 +189,7 @@ li.menu-item.current-menu-item a {
 }
 */
 
-.sand-block {
-    background-color: var(--sable-color);
-}
-
-.rounded-sand-block {
-    background-color: var(--sable-color);
+.rounded-block {
     border-bottom-right-radius: 50% 50px;
     border-bottom-left-radius: 50% 50px;
-}
-
-.white-block {
-    background-color: var(--main-bg-color);
-}
-
-.green-block {
-    background-color: var(--verdure-color);
 }

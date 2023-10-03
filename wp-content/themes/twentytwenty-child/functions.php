@@ -50,29 +50,38 @@ function planty_register_widgets() {
 add_filter("wp_nav_menu_items", 'planty_header_nav_menu', 10, 2);
 function planty_header_nav_menu($items, $args) {
 
-    // Only if logged in and primary menu
+    // Only if user logged in and primary menu
     if (is_user_logged_in() && $args->theme_location == 'primary') {
 
         // Menu string splitted into array of menu item strings
-        $split_pattern = '<li ';
+        $split_pattern = '<li';
         $menu_items = explode($split_pattern, $items);
         $nb_menu_items = count($menu_items);
 
-        // Admin menu item added just before last menu item
-        $new_items = array_slice($menu_items, 0, $nb_menu_items - 1);
+        // Copy beginning of original menu into new menu
+        $new_items[0] = $menu_items[0];
+
+        // n-1 original menu items copied
+        for ($i = 1; $i < $nb_menu_items - 1; $i++) {
+            $new_items[] = $split_pattern . $menu_items[$i];
+        }
+
+        // Admin menu added
         $site_url = get_bloginfo('wpurl');
         $new_items[] =
-            'class="menu-item">' .
+            '<li class="menu-item">' .
                 '<a href="' . $site_url . '/wp-admin">' . 
                     'Admin' .
                 '</a>' .
             '</li>';
 
-        // Last menu item added
-        $new_items[] = $menu_items[$nb_menu_items - 1];
+        // Copy of last menu item if at least one
+        if ($nb_menu_items > 1 ) {
+            $new_items[] = $split_pattern . $menu_items[$nb_menu_items - 1];
+        }
 
         // Array of menu item strings joined into menu string
-        $items = implode($split_pattern, $new_items);
+        $items = implode('', $new_items);
     }
     
     return $items;

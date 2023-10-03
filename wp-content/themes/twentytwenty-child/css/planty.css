@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&display=swap');
 
 /*
- * GENERAL SETTINGS
+* GENERAL SETTINGS
 */
 
 :root {
@@ -31,7 +31,7 @@ body {
 
 .wp-block-button__link.wp-element-button,
 .wpcf7-form-control.wpcf7-submit {
-        font-size: 15px;
+    font-size: 15px;
     color: var(--main-bg-color);
     line-height: 37px;
     padding: 9px 56px;
@@ -47,7 +47,7 @@ body {
 }
 
 /*
- * HEADER SETTINGS
+* HEADER SETTINGS
 */
 
 /* Twenty Twenty theme simplification */
@@ -112,7 +112,7 @@ li.menu-item.current-menu-item a {
 }
 
 /*
- * FOOTER SETTINGS
+* FOOTER SETTINGS
 */
 
 /* Child theme customization */
@@ -143,7 +143,7 @@ li.menu-item.current-menu-item a {
 }
 
 /*
- * MAIN PAGE STYLE
+* MAIN PAGE STYLE
 */
 
 /* Cover image */
@@ -191,6 +191,12 @@ li.menu-item.current-menu-item a {
 
 .sand-block {
     background-color: var(--sable-color);
+}
+
+.rounded-sand-block {
+    background-color: var(--sable-color);
+    border-bottom-right-radius: 50% 50px;
+    border-bottom-left-radius: 50% 50px;
 }
 
 .white-block {

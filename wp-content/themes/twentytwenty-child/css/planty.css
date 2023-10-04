@@ -46,6 +46,20 @@ body {
     text-decoration: none;
 }
 
+/* Planty custom blocks */
+
+/*
+Class 'alignfull' added with Gutenberg in
+"CLASSE(S) CSS ADDITIONNELLE(S)" field when
+block has a filled bacground or need full
+width.
+*/
+
+.rounded-block {
+    border-bottom-right-radius: 50% 50px;
+    border-bottom-left-radius: 50% 50px;
+}
+
 /* Twenty Twenty theme & plugins simplification */
 
 main article header.entry-header,
@@ -68,6 +82,14 @@ li.menu-item a,
     text-decoration: none !important;
 }
 
+li.menu-item a:hover,
+li.menu-item.current-menu-item a,
+.privacy-policy-link:hover {
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0;
+}
+
 /*
 * HEADER SETTINGS
 */
@@ -86,13 +108,6 @@ li.menu-item a,
 ul.primary-menu {
     align-items: center;
     gap: 30px;
-}
-
-li.menu-item a:hover,
-li.menu-item.current-menu-item a {
-    font-size: 13px;
-    font-weight: 700;
-    letter-spacing: 0;
 }
 
 .primary-menu li:last-of-type a {
@@ -136,12 +151,6 @@ li.menu-item.current-menu-item a {
     margin: 0;
 }
 
-.privacy-policy-link:hover {
-    font-size: 13px;
-    font-weight: 700;
-    letter-spacing: 0;
-}
-
 /*
 * MAIN PAGE STYLE
 */
@@ -162,34 +171,4 @@ li.menu-item.current-menu-item a {
     top: 0;
     bottom: 60px;
     z-index: 10;
-}
-
-/* Pages */
-
-/*
-.energie-plantes {
-    padding: 0 300px;
-}
-
-.gouts-boissons {
-    width: 80%;
-}
-
-.temoignages {
-    margin: 0;
-    padding: 10px;
-}
-
-.temoignage {
-    width: 370px;
-}
-
-.full-width-block {
-    background-color: var(--sable-color);
-}
-*/
-
-.rounded-block {
-    border-bottom-right-radius: 50% 50px;
-    border-bottom-left-radius: 50% 50px;
 }

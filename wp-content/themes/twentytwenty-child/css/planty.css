@@ -12,6 +12,7 @@
     --rose-provence-color: #E0B9B4;
     --sable-color: #ECE2DA;
     --verdure-color: #3B8E46;
+    --ombre-color: #E3D9D0;
 }
 
 * {
@@ -23,8 +24,7 @@ body {
     max-width: 1440px;
     min-width: 320px;
     margin: auto;
-    /* Main text elements are centered */
-    text-align: center;
+/*    text-align: center;*/
 }
 
 /* Planty custom button */
@@ -38,12 +38,12 @@ body {
     border-radius: 5px;
     background-color: var(--rose-provence-color);
     text-decoration: none !important;
+    text-transform: none;
 }
 
 .wp-block-button__link.wp-element-button:hover,
 .wpcf7-form-control.wpcf7-submit:hover {
     background-color: var(--clairet-color);
-    text-decoration: none;
 }
 
 /* Planty custom blocks */
@@ -98,7 +98,7 @@ li.menu-item.current-menu-item a,
 
 #site-header > .header-inner {
     height: 80px;
-    padding: 30px 0 31px 0;
+    padding: 31px 0 31px 0;
 }
 
 .custom-logo {
@@ -165,10 +165,59 @@ ul.primary-menu {
 
 .feuilles-canette::before {
     content: '';
-    background: url('../img/canette.png');
     position: absolute;
-    width: 387px;
-    top: 0;
-    bottom: 60px;
+    width: 378px;
+    height: 618px;
+    background-image: url('../img/canette.png');
+    background-size: cover;
+    background-position: center center;
     z-index: 10;
 }
+
+.bottom-shadow {
+    border-bottom: 8px solid;
+    border-color: var(--ombre-color);
+}
+
+/*
+* CONTACT US
+*/
+
+/* Nous rencontrer */
+
+.contact-us {
+    position: relative;
+}
+
+.contact-us::before {
+    content: '';
+    position: absolute;
+    width: 145.3px;
+    height: 150.3px;
+    top: 0;
+    left: 0;
+    background-image: url('../img/fleur.png');
+    background-size: cover;
+    background-position: center center;
+}
+
+/* Equipe Planty */
+
+.planty-team {
+    position: relative;
+}
+
+.planty-team::before {
+    content: '';
+    position: absolute;
+    width: 191px;
+    height: 219px;
+    right: 0;
+    bottom: 0;
+    background-image: url('../img/feuilles-g.png');
+    background-repeat: none;
+    background-size: cover;
+    background-position: center center;
+    z-index: -10;
+}
+

@@ -20,11 +20,10 @@
 }
 
 body {
-    font-family: 'Syne', sans-serif !important;
+    /*font-family: 'Syne', sans-serif !important;*/
     max-width: 1440px;
     min-width: 320px;
     margin: auto;
-/*    text-align: center;*/
 }
 
 /* Planty custom button */
@@ -180,45 +179,36 @@ ul.primary-menu {
 }
 
 /*
-* CONTACT US
+* CONTACT PLANTY TEAM PAGE
 */
 
 /* Nous rencontrer */
 
-.contact-us {
+.meet-planty {
     position: relative;
 }
 
-.contact-us::before {
+.meet-planty::before {
     content: '';
     position: absolute;
     width: 145.3px;
     height: 150.3px;
-    top: 0;
-    left: 0;
+    top: 71px;
+    left: 143px;
     background-image: url('../img/fleur.svg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
 }
 
-/* Equipe Planty */
+.meet-planty-container {
+    max-width: 720px !important;
+}
+
+/* L'équipe */
 
 .planty-team {
     position: relative;
-}
-
-.planty-team::before {
-    content: '';
-    position: absolute;
-    width: 50%;
-    height: 400px;
-    bottom: 0;
-    left: 0;
-    background-image: url('../img/feuilles-g.svg');
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: bottom right;
 }
 
 .planty-team::after {
@@ -233,3 +223,47 @@ ul.primary-menu {
     background-size: cover;
     background-position: center center;
 }
+
+.planty-team.container {
+
+}
+
+/* Nous contacter */
+
+.contact-planty-label {
+    text-align: left;
+}
+
+.contact-planty:not(.contact-planty-label) {
+    text-align: center;
+}
+
+.contact-planty-container {
+    max-width: 383px !important;
+}
+
+.sable-background {
+    background-color: var(--sable-color);
+}
+
+/* Membres équipe */
+
+.planty-members {
+    width: 72%;
+}
+
+.planty-member {
+}
+
+.planty-member .image {
+    margin: 0 10px;
+}
+
+.planty-member .name {
+    margin-top: -20px;
+}
+
+.planty-member .role {
+    margin-bottom: 10px;
+}
+

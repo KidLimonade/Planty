@@ -196,7 +196,8 @@ ul.primary-menu {
     height: 150.3px;
     top: 0;
     left: 0;
-    background-image: url('../img/fleur.png');
+    background-image: url('../img/fleur.svg');
+    background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
 }
@@ -210,14 +211,25 @@ ul.primary-menu {
 .planty-team::before {
     content: '';
     position: absolute;
+    width: 50%;
+    height: 400px;
+    bottom: 0;
+    left: 0;
+    background-image: url('../img/feuilles-g.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: bottom right;
+}
+
+.planty-team::after {
+    content: '';
+    position: absolute;
     width: 191px;
     height: 219px;
     right: 0;
     bottom: 0;
-    background-image: url('../img/feuilles-g.png');
-    background-repeat: none;
+    background-image: url('../img/feuilles-g.svg');
+    background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
-    z-index: -10;
 }
-

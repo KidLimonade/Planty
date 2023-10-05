@@ -6002,7 +6002,7 @@ a.to-the-top > * {
 	[class*="wp-block"].alignwide [class*="__inner-container"] > .alignleft,
 	[class*="wp-block"].alignwide [class*="__inner-container"] > p .alignleft,
 	[class*="wp-block"].alignwide [class*="__inner-container"] > .wp-block-image .alignleft,
-	[class*="wp-block"].alignfull [class*="__inner-container"] > .alignleft,
+	[class*="wp-block"]. [class*="__inner-container"] > .alignleft,
 	[class*="wp-block"].alignfull [class*="__inner-container"] > p .alignleft,
 	[class*="wp-block"].alignfull [class*="__inner-container"] > .wp-block-image .alignleft {
 		position: absolute;

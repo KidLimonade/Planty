@@ -263,8 +263,24 @@ ul.primary-menu {
     Section "Les goûts"
 ----------------------------------------------*/
 
-.planty-flavours {
-    max-width: 800px !important;
+.planty-gouts {
+    padding-top: 2px !important;
+    padding-bottom: 48px !important;
+}
+
+.planty-gouts h2 {
+    margin-bottom: 2px;
+    line-height: normal;
+}
+
+.planty-gouts p {
+    margin-bottom: 48px;
+}
+
+.planty-gouts .flavours {
+    max-width: 900px !important;
+    margin-bottom: 47px !important;
+    gap: 30px;
 }
 
 /*----------------------------------------------

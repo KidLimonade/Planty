@@ -1,3 +1,8 @@
+/***********************************************
+    CSS for 'planty-gout-shortcode' developed
+    in functions.php
+***********************************************/
+
 .planty-gout-shortcode {
     display: inline-block;
     position: relative;
@@ -10,16 +15,21 @@
 }
 
 .planty-gout-shortcode .title {
+    font-weight: 800;
+    text-transform: uppercase;
+    color:white;
+
+    /* Over the whole image */
     position:absolute;
-    z-index: 10;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
+    z-index: 10;
+
+    /* Centering */
+    text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-weight: 800;
-    text-transform: uppercase;
-    color:white;
 }

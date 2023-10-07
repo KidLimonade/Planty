@@ -94,7 +94,9 @@ function planty_header_nav_menu($items, $args) {
 add_shortcode('planty-gout-shortcode', 'planty_gout_cover');
 function planty_gout_cover($atts) {
 
-    // Get the user attributes
+    /**
+     * Get the user attributes
+     */
     $atts = shortcode_atts(
         array(
             'url' => '',
@@ -105,7 +107,9 @@ function planty_gout_cover($atts) {
         ), $atts, 'planty-gout-shortcode'
     );
 
-    // Start buffering output flow
+    /**
+     * Start buffering output flow
+     */
     ob_start();
 
     if ($atts['url'] != '') {
@@ -125,7 +129,9 @@ function planty_gout_cover($atts) {
         <?php
     }
 
-    // Get the buffered output flow and clean
+    /**
+     * Get the buffered output flow and clean
+     */
     $output = ob_get_contents();
     ob_end_clean();
 

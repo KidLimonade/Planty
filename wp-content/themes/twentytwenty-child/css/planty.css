@@ -1,9 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&display=swap');
+/* 'Syne' font loaded and applied to every elements (except counter) */
+* { font-family: 'Syne', sans-serif; }
+h2 { font-family: 'Syne', sans-serif !important; }
 
-/*
-* GENERAL SETTINGS
-*/
+/***********************************************
+    General settings
+***********************************************/
 
+/* CSS colors reflecting customized theme.json */
 :root {
     --main-color: #000;
     --main-bg-color: #FFF;
@@ -15,22 +19,20 @@
     --ombre-color: #E3D9D0;
 }
 
-* {
-    font-family: 'Syne', sans-serif !important;
-}
-
+/* Centered content with min and max width */
 body {
-    /*font-family: 'Syne', sans-serif !important;*/
-    max-width: 1440px;
-    min-width: 320px;
     margin: auto;
+    min-width: 320px;
+    max-width: 1440px;
 }
 
-/* Planty custom button */
+/*----------------------------------------------
+    Planty custom bitton
+----------------------------------------------*/
 
 .wp-block-button__link.wp-element-button,
 .wpcf7-form-control.wpcf7-submit {
-    font-size: 15px;
+    font-size: 0.75em;
     color: var(--main-bg-color);
     line-height: 37px;
     padding: 9px 56px;
@@ -45,22 +47,40 @@ body {
     background-color: var(--clairet-color);
 }
 
-/* Planty custom blocks */
+/*----------------------------------------------
+    Planty custom blocks
 
-/*
-Class 'alignfull' added with Gutenberg in
-"CLASSE(S) CSS ADDITIONNELLE(S)" field when
-block has a filled bacground or need full
-width.
-*/
+    Class 'alignfull' added with Gutenberg in
+    "CLASSE(S) CSS ADDITIONNELLE(S)" field when
+    block has a filled bacground or need full
+    width.
+----------------------------------------------*/
 
-.rounded-block {
-    border-bottom-right-radius: 50% 50px;
-    border-bottom-left-radius: 50% 50px;
+.rounded-block-18px {
+    border-bottom-right-radius: 50% 18px;
+    border-bottom-left-radius: 50% 18px;
 }
 
-/* Twenty Twenty theme & plugins simplification */
+.rounded-block-58px {
+    border-bottom-right-radius: 50% 58px;
+    border-bottom-left-radius: 50% 58px;
+}
 
+.rounded-block-72px {
+    border-bottom-right-radius: 50% 72px;
+    border-bottom-left-radius: 50% 72px;
+}
+
+.bottom-shadow {
+    border-bottom: 8px solid;
+    border-color: var(--ombre-color);
+}
+
+/*----------------------------------------------
+    Twenty Twenty theme & plugins simplification
+----------------------------------------------*/
+
+.post-meta-edit-link-wrapper,
 main article header.entry-header,
 .site-description,
 .toggle-text,
@@ -68,9 +88,9 @@ main article header.entry-header,
     display: none;
 }
 
-/*
-* HEADER & FOOTER SETTINGS
-*/
+/***********************************************
+    Header & footer settings
+***********************************************/
 
 li.menu-item a,
 .privacy-policy-link {
@@ -89,9 +109,9 @@ li.menu-item.current-menu-item a,
     letter-spacing: 0;
 }
 
-/*
-* HEADER SETTINGS
-*/
+/*----------------------------------------------
+    Header special settings
+----------------------------------------------*/
 
 /* Child theme customization */
 
@@ -109,6 +129,7 @@ ul.primary-menu {
     gap: 30px;
 }
 
+/* N - 1 menu items with theme :hover standard */
 .primary-menu li:last-of-type a {
     font-size: 16px;
     font-weight: 700;
@@ -119,11 +140,15 @@ ul.primary-menu {
     color: var(--main-bg-color) !important;
 }
 
+/* Last menu item with child theme :hover cutomization */
 .primary-menu li:last-of-type a::before {
     content: '';
     background-color: var(--saumon-color);
     position: absolute;
-    top: 0; right: -40px; bottom: 0; left: 0;
+    top: 0; 
+    right: -40px; 
+    bottom: 0; 
+    left: 0;
     z-index: -10;
 }
 
@@ -131,9 +156,9 @@ ul.primary-menu {
     background-color: var(--clairet-color);
 }
 
-/*
-* FOOTER SETTINGS
-*/
+/*----------------------------------------------
+    Footer special settings
+----------------------------------------------*/
 
 /* Child theme customization */
 
@@ -155,27 +180,40 @@ ul.primary-menu {
 ***********************************************/
 
 /*----------------------------------------------
-    Section d'accroche - bannière
+    Section d'accroche
 ----------------------------------------------*/
 
-.planty-cover {
+.accroche {
+    padding-top: 5.25em !important;
+    padding-bottom: 0 !important;
+}
+
+/* Le titre accrocheur */
+
+.accroche .titre {
+    line-height: normal;
+}
+
+/* La bannière avec canette et feuilles */
+
+.accroche .cover {
     margin: auto;
 }
 
-.planty-cover figure {
+.accroche .cover figure {
     max-width: 700px;
     position: relative;
     z-index: 0;
 }
 
-.planty-cover img {
+.accroche .cover img {
     margin: auto;
     width: 56%;
     height: auto;
     object-fit: contain;
 }
 
-.planty-cover figure::before {
+.accroche .cover figure::before {
     content: '';
     position: absolute;
     width: 50%;
@@ -189,7 +227,7 @@ ul.primary-menu {
     z-index: -10;
 }
 
-.planty-cover figure::after {
+.accroche .cover figure::after {
     content: '';
     position: absolute;
     width: 50%;
@@ -203,17 +241,22 @@ ul.primary-menu {
     z-index: -10;
 }
 
-.bottom-shadow {
-    border-bottom: 8px solid;
-    border-color: var(--ombre-color);
-}
-
 /*----------------------------------------------
     Section "L'énergie des plantes"
 ----------------------------------------------*/
 
 .energie-plantes {
-    max-width: 500px !important;
+    max-width: 496px !important;
+    margin-top: 72px !important;
+    margin-bottom: 84px !important;
+}
+
+.energie-plantes h2 {
+    margin-bottom: 46px;
+}
+
+.energie-plantes p {
+    line-height: normal;
 }
 
 /*----------------------------------------------

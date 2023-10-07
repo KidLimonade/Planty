@@ -150,11 +150,13 @@ ul.primary-menu {
     margin: 0;
 }
 
-/*
-* MAIN PAGE STYLE
-*/
+/***********************************************
+    Page "Boisson énergisante naturelle"
+***********************************************/
 
-/* Cover image */
+/*----------------------------------------------
+    Section d'accroche - bannière
+----------------------------------------------*/
 
 .feuilles-canette {
     position: relative;
@@ -178,37 +180,100 @@ ul.primary-menu {
     border-color: var(--ombre-color);
 }
 
-/*
-* CONTACT PLANTY TEAM PAGE
-*/
+/*----------------------------------------------
+    Section "L'énergie des plantes"
+----------------------------------------------*/
 
-/* Nous rencontrer */
-
-.meet-planty {
-    position: relative;
+.energie-plantes {
+    max-width: 500px !important;
 }
 
-.meet-planty::before {
+/*----------------------------------------------
+    Section "Les goûts"
+----------------------------------------------*/
+
+.planty-flavours {
+    max-width: 800px !important;
+}
+
+/*----------------------------------------------
+    Section "CE QU’ILS EN PENSENT"
+----------------------------------------------*/
+
+.temoignages-clients {
+    max-width: 1170px;
+}
+
+.temoignage-client {
+    flex: 1;
+    width: 30%;
+    gap: 0;
+    min-width: 280px;
+    max-width: 370px;
+}
+
+.temoignage-client .zone-img {
+    width: 130px;
+}
+
+.temoignage-client .zone-txt {
+    margin: 0;
+}
+
+.temoignage-client .zone-txt .client{
+    margin: 0;
+}
+.temoignage-client .zone-txt .temoignage {
+    margin: 0;
+    line-height: normal;
+}
+
+/***********************************************
+    Page "Contacter équipe Planty"
+***********************************************/
+
+/*----------------------------------------------
+    Section "Nous rencontrer"
+----------------------------------------------*/
+
+.meet-us  h2 {
+    position: relative;
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto;
+    overflow-wrap: normal; 
+    z-index: 0;
+}
+
+.meet-us h2::before {
     content: '';
     position: absolute;
     width: 145.3px;
     height: 150.3px;
-    top: 71px;
-    left: 143px;
+    top: -45.3px;
+    left: 0;
     background-image: url('../img/fleur.svg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
+    z-index: -10;
 }
 
-.meet-planty-container {
-    max-width: 720px !important;
+.meet-us .container {
+    max-width: 720px;
 }
 
-/* L'équipe */
+.meet-us .container p {
+    line-height: normal;
+}
+
+/*----------------------------------------------
+    Section "L'équipe"
+----------------------------------------------*/
 
 .planty-team {
     position: relative;
+    z-index: 10;
 }
 
 .planty-team::after {
@@ -222,13 +287,28 @@ ul.primary-menu {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
+    z-index: 5;
 }
 
-.planty-team.container {
-
+.planty-members {
+    width: 72%;
 }
 
-/* Nous contacter */
+.planty-member .image {
+    margin: 0 10px;
+}
+
+.planty-member .name {
+    margin-top: -20px;
+}
+
+.planty-member .role {
+    margin-bottom: 10px;
+}
+
+/*----------------------------------------------
+    Section "Nous contacter"
+----------------------------------------------*/
 
 .contact-planty-label {
     text-align: left;
@@ -246,24 +326,7 @@ ul.primary-menu {
     background-color: var(--sable-color);
 }
 
-/* Membres équipe */
-
-.planty-members {
-    width: 72%;
-}
-
-.planty-member {
-}
-
-.planty-member .image {
-    margin: 0 10px;
-}
-
-.planty-member .name {
-    margin-top: -20px;
-}
-
-.planty-member .role {
-    margin-bottom: 10px;
-}
+/***********************************************
+    Page "Commander"
+***********************************************/
 

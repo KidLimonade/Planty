@@ -1,7 +1,14 @@
 <?php
 
+/**
+ * Widget displaying the name of a flavour
+ * on a background image of assorted fruit
+ */
 class Planty_Gout_Widget extends WP_Widget {
 
+    /**
+     * Register widget with WordPress.
+     */
     public function __construct() {
         parent::__construct(
             'planty_gout_widget',
@@ -10,14 +17,19 @@ class Planty_Gout_Widget extends WP_Widget {
        );
     }
 
+    /**
+     * Front-end display of widget.
+     */
     public function widget($args, $instance) {
         extract($args);
         $title = $instance['title'];
+        // Size of text in em unit
         $textSize = $instance['text_size'];
         $urlImage = $instance['url_image'];
 
         echo $before_widget;
 
+        // All the widget parameters are mandatory
         if (!empty($title) && !empty($textSize) && !empty($urlImage)) {
             ?>
             <div class="planty-gout-widget">
@@ -37,6 +49,9 @@ class Planty_Gout_Widget extends WP_Widget {
         echo $after_widget;
     }
 
+    /**
+     * Back-end widget form.
+     */
     public function form($instance) {
         if (isset($instance[ 'title' ])) {
             $title = $instance[ 'title' ];
@@ -87,11 +102,14 @@ class Planty_Gout_Widget extends WP_Widget {
         <?php
     }
 
+    /**
+     * Sanitize widget form values as they are saved.
+     */
     public function update($new_instance, $old_instance) {
         $instance = array();
 
         $instance['title'] = (!empty($new_instance['title'])) ? strip_tags($new_instance['title']) : '';
-        $instance['text_size'] = (!empty($new_instance['text_size'])) ? strip_tags($new_instance['text_size']) : '';
+        $instance['text_size'] = (!empty($new_instance['text_size'])) ? strip_tags($new_instance['text_size']) : '1';
         $instance['url_image'] = (!empty($new_instance['url_image'])) ? strip_tags($new_instance['url_image']) : '';
 
         return $instance;

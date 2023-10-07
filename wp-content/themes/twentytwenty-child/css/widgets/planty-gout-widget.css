@@ -1,8 +1,14 @@
+/***********************************************
+    CSS for 'Widget Gout Fruit' developed
+    in planty-gout-widget.php
+***********************************************/
+
 .planty-gout-widget {
     display: inline-block;
     position: relative;
 }
 
+/* Fixed size for widget */
 .planty-gout-widget img{
     width: 393px;
     height: 262px;
@@ -10,16 +16,26 @@
 }
 
 .planty-gout-widget .title {
+    font-weight: 800;
+    text-transform: uppercase;
+    color:white;
+
+    /* Over the whole image */
     position:absolute;
-    z-index: 10;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
+    z-index: 10;
+
+    /* Word break auto */
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto;
+    overflow-wrap: normal; 
+
+    /* Centering */
+    text-align: center;
     display: flex;
-    justify-content: center;
     align-items: center;
-    font-weight: 800;
-    text-transform: uppercase;
-    color:white;
 }

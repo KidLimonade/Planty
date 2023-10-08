@@ -1,13 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&display=swap');
 /* 'Syne' font loaded and applied to every elements (except counter) */
 * { font-family: 'Syne', sans-serif; }
-h2 { font-family: 'Syne', sans-serif !important; }
+h2, h3 { font-family: 'Syne', sans-serif !important; }
 
 /***********************************************
     General settings
 ***********************************************/
 
-/* CSS colors reflecting customized theme.json */
+/* CSS colors reflecting customized 'theme.json' */
 :root {
     --main-color: #000;
     --main-bg-color: #FFF;
@@ -15,7 +15,6 @@ h2 { font-family: 'Syne', sans-serif !important; }
     --saumon-color: #DC9F96;
     --rose-provence-color: #E0B9B4;
     --sable-color: #ECE2DA;
-    --verdure-color: #3B8E46;
     --ombre-color: #E3D9D0;
 }
 
@@ -24,6 +23,19 @@ body {
     margin: auto;
     min-width: 320px;
     max-width: 1440px;
+}
+
+/*----------------------------------------------
+    Planty bottom collection image
+----------------------------------------------*/
+
+.guirlande {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+}
+
+.sable-background {
+    background-color: var(--sable-color);
 }
 
 /*----------------------------------------------
@@ -71,6 +83,7 @@ body {
     border-bottom-left-radius: 50% 72px;
 }
 
+/* Bottom of the first block on main page */
 .bottom-shadow {
     border-bottom: 8px solid;
     border-color: var(--ombre-color);
@@ -130,6 +143,7 @@ ul.primary-menu {
 }
 
 /* N - 1 menu items with theme :hover standard */
+/* Last menu item with child theme :hover cutomization */
 .primary-menu li:last-of-type a {
     font-size: 16px;
     font-weight: 700;
@@ -140,7 +154,6 @@ ul.primary-menu {
     color: var(--main-bg-color) !important;
 }
 
-/* Last menu item with child theme :hover cutomization */
 .primary-menu li:last-of-type a::before {
     content: '';
     background-color: var(--saumon-color);
@@ -287,30 +300,39 @@ ul.primary-menu {
     Section "CE QU’ILS EN PENSENT"
 ----------------------------------------------*/
 
+.testimonials {
+    max-width: 1174px !important;
+    margin-top: 120px !important;
+    margin-bottom: 48px !important;
+}
+
+.testimonials h2 {
+    margin: 0;
+}
+
 .temoignages-clients {
-    max-width: 1170px;
-}
-
-.temoignage-client {
-    flex: 1;
-    width: 30%;
-    gap: 0;
-    min-width: 280px;
-    max-width: 370px;
-}
-
-.temoignage-client .zone-img {
-    width: 130px;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    padding: 0 8px !important;
 }
 
 .temoignage-client .zone-txt {
-    margin: 0;
+    min-width: 160px;
+    width: 100%;
+    gap: 7px;
+    padding: 0 8px;
 }
 
-.temoignage-client .zone-txt .client{
-    margin: 0;
+.temoignage-client .photo {
+    min-width: 126px;
+    min-height: 139px;
 }
-.temoignage-client .zone-txt .temoignage {
+
+.temoignage-client .client{
+    margin: 0 !important;
+}
+
+.temoignage-client .temoignage {
     margin: 0;
     line-height: normal;
 }
@@ -323,27 +345,33 @@ ul.primary-menu {
     Section "Nous rencontrer"
 ----------------------------------------------*/
 
-.meet-us  h2 {
+.meet-us {
     position: relative;
-    -webkit-hyphens: auto;
-    -ms-hyphens: auto;
-    hyphens: auto;
-    overflow-wrap: normal; 
     z-index: 0;
 }
 
-.meet-us h2::before {
+.meet-us::before {
     content: '';
     position: absolute;
     width: 145.3px;
     height: 150.3px;
-    top: -45.3px;
+    top: 0;
     left: 0;
     background-image: url('../img/fleur.svg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
     z-index: -10;
+}
+
+.meet-us .titre {
+    margin-top: 3em !important;
+    margin-bottom: 0 !important;
+}
+
+.meet-us .container {
+    margin-top: 1em !important;
+    margin-bottom: 0 !important;
 }
 
 .meet-us .container {
@@ -409,13 +437,26 @@ ul.primary-menu {
     max-width: 383px !important;
 }
 
-.sable-background {
-    background-color: var(--sable-color);
-}
-
 /***********************************************
     Page "Commander"
 ***********************************************/
+
+/***********************************************
+    Media queries
+***********************************************/
+
+@media screen and (max-width: 640px) {
+    
+    .accroche .titre,
+    .meet-us  h2 {
+    
+        /* Word break auto */
+        -webkit-hyphens: auto;
+        -ms-hyphens: auto;
+        hyphens: auto;
+        overflow-wrap: normal; 
+    }
+}
 
 /* SANDBOX */
 

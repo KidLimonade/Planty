@@ -350,13 +350,14 @@ ul.primary-menu {
     z-index: 0;
 }
 
+/* Flower decoration attached to block */
 .meet-us::before {
     content: '';
     position: absolute;
-    width: 145.3px;
-    height: 150.3px;
-    top: 0;
-    left: 0;
+    width: 191px;
+    height: 170px;
+    top: 71px;
+    left: 10%;
     background-image: url('../img/fleur.svg');
     background-repeat: no-repeat;
     background-size: cover;
@@ -364,18 +365,10 @@ ul.primary-menu {
     z-index: -10;
 }
 
-.meet-us .titre {
-    margin-top: 3em !important;
-    margin-bottom: 0 !important;
-}
-
-.meet-us .container {
-    margin-top: 1em !important;
-    margin-bottom: 0 !important;
-}
-
 .meet-us .container {
     max-width: 720px;
+    margin-top: 96px !important;
+    margin-bottom: 0 !important;
 }
 
 .meet-us .container p {
@@ -386,18 +379,38 @@ ul.primary-menu {
     Section "L'équipe"
 ----------------------------------------------*/
 
-.planty-team {
+.planty-team .planty-members {
+    width: 70%;
+    margin-top: -3em !important;
+}
+
+.planty-member .name {
+    margin-top: -1.5em;
+    margin-bottom: -0.4em;
+}
+
+.planty-member .role {
+    margin-bottom: 0.4em;
+}
+
+/*----------------------------------------------
+    Section "Nous contacter"
+----------------------------------------------*/
+
+.contact-planty {
+    margin-top: 0 !important;
     position: relative;
     z-index: 10;
 }
 
-.planty-team::after {
+/* Foliage decoration attached to bottom right */
+.contact-planty:after {
     content: '';
     position: absolute;
     width: 191px;
     height: 219px;
-    right: 0;
-    bottom: 0;
+    top: -219px;
+    right: 58px;
     background-image: url('../img/feuilles-g.svg');
     background-repeat: no-repeat;
     background-size: cover;
@@ -405,25 +418,14 @@ ul.primary-menu {
     z-index: 5;
 }
 
-.planty-members {
-    width: 72%;
+.contact-container {
+    max-width: 383px !important;
+    margin-top: -72px !important;
+    margin-bottom: 0 !important;
 }
 
-.planty-member .image {
-    margin: 0 10px;
+.contact-container {;
 }
-
-.planty-member .name {
-    margin-top: -20px;
-}
-
-.planty-member .role {
-    margin-bottom: 10px;
-}
-
-/*----------------------------------------------
-    Section "Nous contacter"
-----------------------------------------------*/
 
 .contact-planty-label {
     text-align: left;
@@ -431,10 +433,6 @@ ul.primary-menu {
 
 .contact-planty:not(.contact-planty-label) {
     text-align: center;
-}
-
-.contact-planty-container {
-    max-width: 383px !important;
 }
 
 /***********************************************
@@ -445,10 +443,10 @@ ul.primary-menu {
     Media queries
 ***********************************************/
 
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 720px) {
     
     .accroche .titre,
-    .meet-us  h2 {
+    .meet-us .titre {
     
         /* Word break auto */
         -webkit-hyphens: auto;
@@ -456,6 +454,20 @@ ul.primary-menu {
         hyphens: auto;
         overflow-wrap: normal; 
     }
+
+    .meet-us::before {
+        content: '';
+        position: absolute;
+        width: 96px;
+        height: 85px;
+        top: 35px;
+        left: 72px;
+        background-image: url('../img/fleur.svg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        z-index: -10;
+    }    
 }
 
 /* SANDBOX */

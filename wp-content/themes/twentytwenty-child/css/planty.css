@@ -43,7 +43,7 @@ body {
 ----------------------------------------------*/
 
 .wp-block-button__link.wp-element-button,
-.wpcf7-form-control.wpcf7-submit {
+#planty-form-button {
     font-size: 0.75em;
     color: var(--main-bg-color);
     line-height: 37px;
@@ -55,7 +55,7 @@ body {
 }
 
 .wp-block-button__link.wp-element-button:hover,
-.wpcf7-form-control.wpcf7-submit:hover {
+#planty-form-button:hover {
     background-color: var(--clairet-color);
 }
 
@@ -398,7 +398,6 @@ ul.primary-menu {
 ----------------------------------------------*/
 
 .contact-planty {
-    margin-top: 0 !important;
     position: relative;
     z-index: 10;
 }
@@ -418,21 +417,39 @@ ul.primary-menu {
     z-index: 5;
 }
 
-.contact-container {
-    max-width: 383px !important;
-    margin-top: -72px !important;
-    margin-bottom: 0 !important;
+/* Title customization */
+.contact-planty .title {
+    margin-bottom: 45px;
+    background-color: #E0B9B4;
 }
 
-.contact-container {;
+/* Form customization */
+.contact-planty .form {
+    max-width: 383px;
 }
 
-.contact-planty-label {
+.contact-planty .form-label {
+    position: relative;
+    z-index: 0;
     text-align: left;
 }
 
-.contact-planty:not(.contact-planty-label) {
+.contact-planty:not(.form-label) {
     text-align: center;
+}
+
+.contact-planty .form-label.decoration::before {
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    bottom: -50px;
+    left: -50px;
+    background-image: url('../img/baies.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    z-index: -10;
 }
 
 /***********************************************

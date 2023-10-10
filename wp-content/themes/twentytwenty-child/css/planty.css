@@ -26,12 +26,29 @@ body {
 }
 
 /*----------------------------------------------
-    Planty bottom collection image
+    Planty bottom image aka "guirlande"
 ----------------------------------------------*/
 
 .guirlande {
     margin-top: 0 !important;
     margin-bottom: 0 !important;
+}
+
+.planty-guirlande,
+.planty-guirlande figure {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+}
+
+.planty-guirlande figure {
+    height: 131px;
+    width: 100%;
+}
+
+.planty-guirlande img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
 }
 
 .sable-background {
@@ -42,21 +59,30 @@ body {
     Planty custom bitton
 ----------------------------------------------*/
 
-.wp-block-button__link.wp-element-button,
+/*  WordPress and Planty Contact Form 7
+    buttons shared customization */
+.wp-block-button .wp-block-button__link.wp-element-button,
 #planty-form-button {
-    font-size: 0.75em;
-    color: var(--main-bg-color);
+    font-size: 15px;
+    font-weight: 400;
     line-height: 37px;
     padding: 9px 56px;
     border-radius: 5px;
+    color: var(--main-bg-color);
     background-color: var(--rose-provence-color);
-    text-decoration: none !important;
+    text-decoration: none;
     text-transform: none;
 }
 
 .wp-block-button__link.wp-element-button:hover,
 #planty-form-button:hover {
     background-color: var(--clairet-color);
+}
+
+/*  Planty Contact Form 7
+    button specific customization */
+#planty-form-button {
+    width: 198px;
 }
 
 /*----------------------------------------------
@@ -203,7 +229,7 @@ ul.primary-menu {
 
 /* Le titre accrocheur */
 
-.accroche .titre {
+.accroche .title {
     line-height: normal;
 }
 
@@ -459,21 +485,16 @@ ul.primary-menu {
 .contact-form .field.decoration::before {
     content: '';
     position: absolute;
+    z-index: -10;
     width: 185px;
     height: 178px;
     top: 146.6px;
     right: 285.4px;
     background-image: url('../img/baies.png');
-    z-index: -10;
 }
 
 .contact-form:not(.field) {
     text-align: center;
-}
-
-#planty-form-button {
-    width: 198px;
-    font-size: 15px;
 }
 
 /***********************************************
@@ -486,8 +507,8 @@ ul.primary-menu {
 
 @media screen and (max-width: 720px) {
     
-    .accroche .titre,
-    .meet-us .titre {
+    .accroche .title,
+    .meet-us .title {
     
         /* Word break auto */
         -webkit-hyphens: auto;
@@ -508,7 +529,12 @@ ul.primary-menu {
         background-size: cover;
         background-position: center center;
         z-index: -10;
-    }    
+    }
+
+
+    .planty-guirlande figure {
+        height: 100px;
+    }
 }
 
 /* SANDBOX */

@@ -29,11 +29,6 @@ body {
     Planty bottom image aka "guirlande"
 ----------------------------------------------*/
 
-.guirlande {
-    margin-top: 0 !important;
-    margin-bottom: 0 !important;
-}
-
 .planty-guirlande,
 .planty-guirlande figure {
     margin-top: 0 !important;
@@ -56,7 +51,7 @@ body {
 }
 
 /*----------------------------------------------
-    Planty custom bitton
+    Planty custom button
 ----------------------------------------------*/
 
 /*  WordPress and Planty Contact Form 7
@@ -229,7 +224,7 @@ ul.primary-menu {
 
 /* Le titre accrocheur */
 
-.accroche .title {
+.accroche .page-title {
     line-height: normal;
 }
 
@@ -443,15 +438,13 @@ ul.primary-menu {
     Section "Nous contacter"
 ----------------------------------------------*/
 
-/*========== Main block ==========*/
-
 .contact-planty {
     padding-bottom: 42px !important;
 }
 
 /*---------- Block title ----------*/
 
-.contact-planty .title {
+.contact-planty .block-title {
     margin-top: -14px;
     margin-bottom: 45px;
 }
@@ -466,7 +459,7 @@ ul.primary-menu {
     position: relative;
     z-index: 0;
     text-align: left;
-    font-size: 20px;
+    font-size: 1em;
 }
 
 .contact-form .field input {
@@ -501,14 +494,64 @@ ul.primary-menu {
     Page "Commander"
 ***********************************************/
 
+/*---------- Page title ----------*/
+
+.planty-order .page-title {
+    margin-top: -11px;
+    margin-bottom: 69px;
+}
+
+/*---------- Order form ----------*/
+
+.planty-order .order-form {
+    max-width: 860px;
+}
+
+.order-form .field {
+    text-align: left;
+    font-size: 1em;
+    color: var(--main-bg-color);
+}
+
+.order-form .field input {
+    width: 383px;
+    height: 71px;
+    border-radius: 7px;
+    margin-top: 13px;
+}
+
+.order-form .info-title {
+    font-size: 1.5em;
+    font-weight: 700;
+    color: var(--main-bg-color);
+}
+
+.order-form .order-infos {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.order-form .horizontal-separator {
+    width: 100%;
+    height: 1px;
+    background-color: var(--main-bg-color);
+}
+
+.order-form .vertical-separator {
+    width: 1px;
+    height: 100%;
+    background-color: var(--main-bg-color);
+}
+
 /***********************************************
     Media queries
 ***********************************************/
 
 @media screen and (max-width: 720px) {
     
-    .accroche .title,
-    .meet-us .title {
+    .accroche .page-title,
+    .meet-us .page-title {
     
         /* Word break auto */
         -webkit-hyphens: auto;
@@ -530,7 +573,6 @@ ul.primary-menu {
         background-position: center center;
         z-index: -10;
     }
-
 
     .planty-guirlande figure {
         height: 100px;

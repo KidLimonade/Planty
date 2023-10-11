@@ -4,8 +4,12 @@
 h2, h3 { font-family: 'Syne', sans-serif !important; }
 
 /***********************************************
-    General settings
+General settings
 ***********************************************/
+
+/*----------------------------------------------
+Planty colors & size
+----------------------------------------------*/
 
 /* CSS colors reflecting customized 'theme.json' */
 :root {
@@ -26,7 +30,37 @@ body {
 }
 
 /*----------------------------------------------
-    Planty bottom image aka "guirlande"
+Planty  button
+----------------------------------------------*/
+
+/*  WordPress and Planty Contact Form 7
+buttons shared customization */
+.wp-block-button .wp-block-button__link.wp-element-button,
+#planty-form-button {
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 37px;
+    padding: 9px 56px;
+    border-radius: 5px;
+    color: var(--main-bg-color);
+    background-color: var(--rose-provence-color);
+    text-decoration: none;
+    text-transform: none;
+}
+
+.wp-block-button__link.wp-element-button:hover,
+#planty-form-button:hover {
+    background-color: var(--clairet-color);
+}
+
+/*  Planty Contact Form 7
+buttons specific customization */
+#planty-form-button {
+    width: 198px;
+}
+
+/*----------------------------------------------
+Planty bottom image aka "guirlande"
 ----------------------------------------------*/
 
 .planty-guirlande,
@@ -51,42 +85,12 @@ body {
 }
 
 /*----------------------------------------------
-    Planty custom button
-----------------------------------------------*/
+Planty custom blocks
 
-/*  WordPress and Planty Contact Form 7
-    buttons shared customization */
-.wp-block-button .wp-block-button__link.wp-element-button,
-#planty-form-button {
-    font-size: 15px;
-    font-weight: 400;
-    line-height: 37px;
-    padding: 9px 56px;
-    border-radius: 5px;
-    color: var(--main-bg-color);
-    background-color: var(--rose-provence-color);
-    text-decoration: none;
-    text-transform: none;
-}
-
-.wp-block-button__link.wp-element-button:hover,
-#planty-form-button:hover {
-    background-color: var(--clairet-color);
-}
-
-/*  Planty Contact Form 7
-    button specific customization */
-#planty-form-button {
-    width: 198px;
-}
-
-/*----------------------------------------------
-    Planty custom blocks
-
-    Class 'alignfull' added with Gutenberg in
-    "CLASSE(S) CSS ADDITIONNELLE(S)" field when
-    block has a filled bacground or need full
-    width.
+Class 'alignfull' added with Gutenberg in
+"CLASSE(S) CSS ADDITIONNELLE(S)" field when
+block has a filled bacground or need full
+width.
 ----------------------------------------------*/
 
 .rounded-block-18px {
@@ -111,7 +115,7 @@ body {
 }
 
 /*----------------------------------------------
-    Twenty Twenty theme & plugins simplification
+Twenty Twenty theme & plugins simplification
 ----------------------------------------------*/
 
 .post-meta-edit-link-wrapper,
@@ -123,7 +127,7 @@ main article header.entry-header,
 }
 
 /***********************************************
-    Header & footer settings
+Header & footer settings
 ***********************************************/
 
 li.menu-item a,
@@ -144,7 +148,7 @@ li.menu-item.current-menu-item a,
 }
 
 /*----------------------------------------------
-    Header special settings
+Header special settings
 ----------------------------------------------*/
 
 /* Child theme customization */
@@ -179,11 +183,11 @@ ul.primary-menu {
     content: '';
     background-color: var(--saumon-color);
     position: absolute;
+    z-index: -10;
     top: 0; 
     right: -40px; 
     bottom: 0; 
     left: 0;
-    z-index: -10;
 }
 
 .primary-menu li:last-of-type a:hover:before {
@@ -191,7 +195,7 @@ ul.primary-menu {
 }
 
 /*----------------------------------------------
-    Footer special settings
+Footer special settings
 ----------------------------------------------*/
 
 /* Child theme customization */
@@ -210,11 +214,11 @@ ul.primary-menu {
 }
 
 /***********************************************
-    Page "Boisson énergisante naturelle"
+Page "Boisson énergisante naturelle"
 ***********************************************/
 
 /*----------------------------------------------
-    Section d'accroche
+Section d'accroche
 ----------------------------------------------*/
 
 .accroche {
@@ -250,6 +254,7 @@ ul.primary-menu {
 .accroche .cover figure::before {
     content: '';
     position: absolute;
+    z-index: -10;
     width: 50%;
     height: 100%;
     bottom: -38px;
@@ -258,12 +263,12 @@ ul.primary-menu {
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center center;
-    z-index: -10;
 }
 
 .accroche .cover figure::after {
     content: '';
     position: absolute;
+    z-index: -10;
     width: 50%;
     height: 100%;
     right: 5px;
@@ -272,11 +277,10 @@ ul.primary-menu {
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center center;
-    z-index: -10;
 }
 
 /*----------------------------------------------
-    Section "L'énergie des plantes"
+Section "L'énergie des plantes"
 ----------------------------------------------*/
 
 .energie-plantes {
@@ -294,7 +298,7 @@ ul.primary-menu {
 }
 
 /*----------------------------------------------
-    Section "Les goûts"
+Section "Les goûts"
 ----------------------------------------------*/
 
 .planty-gouts {
@@ -318,7 +322,7 @@ ul.primary-menu {
 }
 
 /*----------------------------------------------
-    Section "CE QU’ILS EN PENSENT"
+Section "CE QU’ILS EN PENSENT"
 ----------------------------------------------*/
 
 .testimonials {
@@ -359,11 +363,11 @@ ul.primary-menu {
 }
 
 /***********************************************
-    Page "Contacter équipe Planty"
+Page "Contacter équipe Planty"
 ***********************************************/
 
 /*----------------------------------------------
-    Section "Nous rencontrer"
+Section "Nous rencontrer"
 ----------------------------------------------*/
 
 .meet-us {
@@ -375,6 +379,7 @@ ul.primary-menu {
 .meet-us::before {
     content: '';
     position: absolute;
+    z-index: -10;
     width: 191px;
     height: 170px;
     top: 71px;
@@ -383,7 +388,6 @@ ul.primary-menu {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
-    z-index: -10;
 }
 
 .meet-us .container {
@@ -397,7 +401,7 @@ ul.primary-menu {
 }
 
 /*----------------------------------------------
-    Section "L'équipe"
+Section "L'équipe"
 ----------------------------------------------*/
 
 .planty-team {
@@ -409,6 +413,7 @@ ul.primary-menu {
 .planty-team:before {
     content: '';
     position: absolute;
+    z-index: -10;
     width: 191px;
     height: 219px;
     bottom: 0;
@@ -417,7 +422,6 @@ ul.primary-menu {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
-    z-index: -10;
 }
 
 .planty-team .planty-members {
@@ -435,7 +439,7 @@ ul.primary-menu {
 }
 
 /*----------------------------------------------
-    Section "Nous contacter"
+Section "Nous contacter"
 ----------------------------------------------*/
 
 .contact-planty {
@@ -491,17 +495,21 @@ ul.primary-menu {
 }
 
 /***********************************************
-    Page "Commander"
+Page "Commander"
 ***********************************************/
 
-/*---------- Page title ----------*/
+/*----------------------------------------------
+Page title
+----------------------------------------------*/
 
 .planty-order .page-title {
     margin-top: -11px;
     margin-bottom: 69px;
 }
 
-/*---------- Order form ----------*/
+/*----------------------------------------------
+Order form
+----------------------------------------------*/
 
 .planty-order .order-form {
     max-width: 860px;
@@ -544,25 +552,49 @@ ul.primary-menu {
     background-color: var(--main-bg-color);
 }
 
+/*----------------------------------------------
+Planty quantity counter
+----------------------------------------------*/
+
+.wpcf7-form-control.qty-counter {
+    font-size: 16px;
+    width: 82px;
+    height: 56px;
+    border-radius: 7px;
+    position: relative;
+    z-index: 0;
+}
+
+/* Hide 'number' field native controls */
+input::-webkit-inner-spin-button,
+input::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
 /***********************************************
-    Media queries
+Media queries
 ***********************************************/
 
 @media screen and (max-width: 720px) {
     
     .accroche .page-title,
     .meet-us .page-title {
-    
+        
         /* Word break auto */
         -webkit-hyphens: auto;
         -ms-hyphens: auto;
         hyphens: auto;
         overflow-wrap: normal; 
     }
-
+    
     .meet-us::before {
         content: '';
         position: absolute;
+        z-index: -10;
         width: 96px;
         height: 85px;
         top: 35px;
@@ -571,9 +603,8 @@ ul.primary-menu {
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center center;
-        z-index: -10;
     }
-
+    
     .planty-guirlande figure {
         height: 100px;
     }

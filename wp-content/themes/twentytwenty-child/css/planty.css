@@ -33,10 +33,10 @@ body {
 Planty  button
 ----------------------------------------------*/
 
-/*  WordPress and Planty Contact Form 7
-buttons shared customization */
+/*  WordPress and Planty Form 7
+submit buttons shared customization */
 .wp-block-button .wp-block-button__link.wp-element-button,
-#planty-form-button {
+#planty-form-submit-button {
     font-size: 15px;
     font-weight: 400;
     line-height: 37px;
@@ -48,14 +48,14 @@ buttons shared customization */
     text-transform: none;
 }
 
-.wp-block-button__link.wp-element-button:hover,
-#planty-form-button:hover {
+.wp-block-button .wp-block-button__link.wp-element-button:hover,
+#planty-form-submit-button:hover {
     background-color: var(--clairet-color);
 }
 
-/*  Planty Contact Form 7
+/*  Planty Form 7 submit
 buttons specific customization */
-#planty-form-button {
+#planty-form-submit-button {
     width: 198px;
 }
 
@@ -611,6 +611,43 @@ input[type=number] {
     position: absolute;
     bottom: 0;
     right: 0;
+}
+
+/*----------------------------------------------
+Ok button
+----------------------------------------------*/
+
+.order-form .planty-form-button {
+    width: 100px;
+    height: 56px;
+    border-radius: 7px;
+    text-transform: none;
+    text-decoration: none;
+    background-color: var(--rose-provence-color);
+}
+
+.order-form .planty-form-button:hover {
+    background-color: var(--clairet-color);
+}
+
+.order-form .flavour-quantity {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.order-form .flavour-block {
+    width: 193px;
+}
+
+.order-form .flavour-block .planty-gout-shortcode p {
+    margin-bottom: 4px;
+}
+
+.order-form .flavours {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
 /***********************************************

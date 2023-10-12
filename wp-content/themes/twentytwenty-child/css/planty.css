@@ -1,11 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&display=swap');
 /* 'Syne' font loaded and applied to every elements (except counter) */
 * { font-family: 'Syne', sans-serif; }
-h2, h3 { font-family: 'Syne', sans-serif !important; }
 
 /***********************************************
 General settings
 ***********************************************/
+
+/*----------------------------------------------
+Override Twenty Twenty theme defaults if necessary
+----------------------------------------------*/
+
+/* Force h2 and h3 title to use site font */
+.planty-title {
+     font-family: 'Syne', sans-serif !important; 
+}
+
+.entry-content p {
+    line-height: 1.2em;
+}
 
 /*----------------------------------------------
 Planty colors & size
@@ -27,6 +39,7 @@ body {
     margin: auto;
     min-width: 320px;
     max-width: 1440px;
+    letter-spacing: normal;
 }
 
 /*----------------------------------------------
@@ -329,7 +342,8 @@ Section "CE QU’ILS EN PENSENT"
 }
 
 .testimonials h2 {
-    margin: 0;
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
 .temoignages-clients {
@@ -351,11 +365,13 @@ Section "CE QU’ILS EN PENSENT"
 }
 
 .temoignage-client .client{
-    margin: 0 !important;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
 }
 
 .temoignage-client .temoignage {
-    margin: 0;
+    margin-top: 0;
+    margin-bottom: 0;
     line-height: normal;
 }
 
@@ -511,10 +527,28 @@ input[type=number] {
     height: 1px;
     background-color: var(--main-bg-color);
 }
+.planty-order .horizontal-separator.front {
+    margin-bottom: 40px;
+}
+.planty-order .horizontal-separator.inside {
+    margin-bottom: 53px;
+}
+
 .planty-order .vertical-separator {
     width: 1px;
-    height: 100%;
+    align-self: stretch;
     background-color: var(--main-bg-color);
+}
+
+/* Twenty Twenty theme customization */
+.planty-order .order-form .section-title.front {
+    margin-bottom: 39px;
+}
+.planty-order .order-form p:not(.section-title) {
+    margin-bottom: 0;
+}
+.planty-order .order-form .section-title.inside {
+    margin-bottom: 29px;
 }
 
 /*============================================*/
@@ -529,6 +563,7 @@ input[type=number] {
 .planty-order .section-title {
     font-size: 1.5em;
     font-weight: 700;
+    text-align: left;
     color: var(--main-bg-color);
 }
 
@@ -538,6 +573,7 @@ input[type=number] {
 
 .planty-order .order-form {
     max-width: 860px;
+    text-align: center;
 }
 
 /*----------------------------------------------
@@ -562,7 +598,7 @@ shortcode defined in 'functions.php' and styled
 into the file 'planty-gout-shortcode.css' */
 
 .order-form .flavour .planty-gout-shortcode p {
-    margin-bottom: 4px;
+    margin-bottom: 6px;
 }
 
 .order-form .flavour .planty-gout-shortcode img {
@@ -575,6 +611,7 @@ into the file 'planty-gout-shortcode.css' */
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    margin-bottom: 40px;
 }
 
 .order-form .quantity-field {
@@ -598,6 +635,7 @@ into the file 'planty-gout-shortcode.css' */
 .order-form .inc-btn,
 .order-form .dec-btn {
     font-size: 20px;
+    font-weight: 400;
     width: 31px;
     height: 28px;
     padding: 0;
@@ -630,12 +668,14 @@ into the file 'planty-gout-shortcode.css' */
 /* ---------- Flavour 'Ok' button ---------- */
 
 .order-form .ok-button {
+    font-size: 15px;
+    font-weight: 400;
     width: 100px;
     height: 56px;
     border-radius: 7px;
     background-color: var(--rose-provence-color);
     text-decoration: none;
-    text-transform: none;
+    text-transform: uppercase;
 }
 .order-form .ok-button:hover {
     background-color: var(--clairet-color);
@@ -650,6 +690,7 @@ Personal and delivery informations
     flex-direction: row;
     justify-content: space-between;
     flex-wrap: wrap;
+    margin-bottom: 39px;
 }
 
 .order-form .field {
@@ -663,6 +704,15 @@ Personal and delivery informations
     height: 71px;
     border-radius: 7px;
     margin-top: 13px;
+    margin-bottom: 0;
+}
+
+/*----------------------------------------------
+Form global submit button
+----------------------------------------------*/
+
+.order-form #planty-form-submit-button {
+    margin-bottom: -7px;
 }
 
 /***********************************************

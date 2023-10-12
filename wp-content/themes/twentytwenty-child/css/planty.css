@@ -47,7 +47,6 @@ submit buttons shared customization */
     text-decoration: none;
     text-transform: none;
 }
-
 .wp-block-button .wp-block-button__link.wp-element-button:hover,
 #planty-form-submit-button:hover {
     background-color: var(--clairet-color);
@@ -138,7 +137,6 @@ li.menu-item a,
     color: var(--main-color) !important;
     text-decoration: none !important;
 }
-
 li.menu-item a:hover,
 li.menu-item.current-menu-item a,
 .privacy-policy-link:hover {
@@ -189,7 +187,6 @@ ul.primary-menu {
     bottom: 0; 
     left: 0;
 }
-
 .primary-menu li:last-of-type a:hover:before {
     background-color: var(--clairet-color);
 }
@@ -498,21 +495,161 @@ Section "Nous contacter"
 Page "Commander"
 ***********************************************/
 
-/*----------------------------------------------
-Page title
-----------------------------------------------*/
+/* Hide 'number' field type native controls */
+input::-webkit-inner-spin-button,
+input::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+/* section separators */
+.planty-order .horizontal-separator {
+    width: 100%;
+    height: 1px;
+    background-color: var(--main-bg-color);
+}
+.planty-order .vertical-separator {
+    width: 1px;
+    height: 100%;
+    background-color: var(--main-bg-color);
+}
+
+/*============================================*/
+/*  Page titles
+/*============================================*/
 
 .planty-order .page-title {
     margin-top: -11px;
     margin-bottom: 69px;
 }
 
-/*----------------------------------------------
-Main Order form
-----------------------------------------------*/
+.planty-order .section-title {
+    font-size: 1.5em;
+    font-weight: 700;
+    color: var(--main-bg-color);
+}
+
+/*============================================*/
+/*  Section order form
+/*============================================*/
 
 .planty-order .order-form {
     max-width: 860px;
+}
+
+/*----------------------------------------------
+Order quantities for each flavour
+----------------------------------------------*/
+
+.order-form .flavours {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+/* ========== Flavour vertical block ========== */
+
+.order-form .flavour {
+    width: 193px;
+}
+
+/*  Covers with image and text are shared with the
+shortcode defined in 'functions.php' and styled
+into the file 'planty-gout-shortcode.css' */
+
+.order-form .flavour .planty-gout-shortcode p {
+    margin-bottom: 4px;
+}
+
+.order-form .flavour .planty-gout-shortcode img {
+    height: 129px;
+}
+
+/* ---------- Flavour order quantity ---------- */
+
+.order-form .flavour-quantity {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.order-form .quantity-field {
+    width: 82px;
+    height: 56px;
+    position: relative;
+}
+
+.order-form .wpcf7-form-control.qty-counter {
+    font-size: 16px;
+    width: 51px;
+    height: 56px;
+    padding-left: 0;
+    padding-right: 0;
+    text-align: center;
+    border-top-left-radius: 7px;
+    border-bottom-left-radius: 7px;
+}
+
+/* Shared config. for '+' and '-' buttons */
+.order-form .inc-btn,
+.order-form .dec-btn {
+    font-size: 20px;
+    width: 31px;
+    height: 28px;
+    padding: 0;
+    text-align: center;
+    background-color: var(--saumon-color);
+    text-decoration: none;
+}
+.order-form .inc-btn:hover,
+.order-form .dec-btn:hover {
+    background-color: var(--clairet-color);
+}
+
+/* Specific config. for '+' button */
+.order-form .inc-btn {
+    border-bottom: 1px solid var(--main-bg-color);
+    border-top-right-radius: 7px;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+/* Specific config. for '-' button */
+.order-form .dec-btn {
+    border-bottom-right-radius: 7px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+/* ---------- Flavour 'Ok' button ---------- */
+
+.order-form .ok-button {
+    width: 100px;
+    height: 56px;
+    border-radius: 7px;
+    background-color: var(--rose-provence-color);
+    text-decoration: none;
+    text-transform: none;
+}
+.order-form .ok-button:hover {
+    background-color: var(--clairet-color);
+}
+
+/*----------------------------------------------
+Personal and delivery informations
+----------------------------------------------*/
+
+.order-form .order-infos {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .order-form .field {
@@ -528,128 +665,6 @@ Main Order form
     margin-top: 13px;
 }
 
-.order-form .info-title {
-    font-size: 1.5em;
-    font-weight: 700;
-    color: var(--main-bg-color);
-}
-
-.order-form .order-infos {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-
-.order-form .horizontal-separator {
-    width: 100%;
-    height: 1px;
-    background-color: var(--main-bg-color);
-}
-
-.order-form .vertical-separator {
-    width: 1px;
-    height: 100%;
-    background-color: var(--main-bg-color);
-}
-
-/*----------------------------------------------
-Quantity order counter
-----------------------------------------------*/
-
-/* Hide 'number' field native controls */
-input::-webkit-inner-spin-button,
-input::-webkit-outer-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
-}
-input[type=number] {
-    -moz-appearance: textfield;
-}
-
-.order-form .count-block {
-    width: 82px;
-    height: 56px;
-    position: relative;
-}
-
-.wpcf7-form-control.qty-counter {
-    font-size: 16px;
-    padding-left: 0;
-    padding-right: 0;
-    text-align: center;
-    width: 51px;
-    height: 56px;
-    border-top-left-radius: 7px;
-    border-bottom-left-radius: 7px;
-}
-
-.order-form .inc-btn,
-.order-form .dec-btn {
-    font-size: 20px;
-    padding: 0;
-    width: 31px;
-    background-color: var(--saumon-color);
-    text-decoration: none;
-}
-.order-form .inc-btn:hover,
-.order-form .dec-btn:hover {
-    background-color: var(--clairet-color);
-}
-
-.order-form .inc-btn {
-    border-top-right-radius: 7px;
-    height: 28px;
-    border-bottom: 1px solid var(--main-bg-color);
-    position: absolute;
-    top: 0;
-    right: 0;
-}
-
-.order-form .dec-btn {
-    border-bottom-right-radius: 7px;
-    height: 28px;
-    position: absolute;
-    bottom: 0;
-    right: 0;
-}
-
-/*----------------------------------------------
-Ok button
-----------------------------------------------*/
-
-.order-form .planty-form-button {
-    width: 100px;
-    height: 56px;
-    border-radius: 7px;
-    text-transform: none;
-    text-decoration: none;
-    background-color: var(--rose-provence-color);
-}
-
-.order-form .planty-form-button:hover {
-    background-color: var(--clairet-color);
-}
-
-.order-form .flavour-quantity {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-
-.order-form .flavour-block {
-    width: 193px;
-}
-
-.order-form .flavour-block .planty-gout-shortcode p {
-    margin-bottom: 4px;
-}
-
-.order-form .flavours {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-
 /***********************************************
 Media queries
 ***********************************************/
@@ -657,7 +672,8 @@ Media queries
 @media screen and (max-width: 720px) {
     
     .accroche .page-title,
-    .meet-us .page-title {
+    .meet-us .page-title,
+    .planty-order .page-title {
         
         /* Word break auto */
         -webkit-hyphens: auto;

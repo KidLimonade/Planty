@@ -19,6 +19,7 @@
     font-weight: 800;
     text-transform: uppercase;
     line-height: 1.2em;
+    letter-spacing: normal;
     color:white;
 
     /* Over the whole image */
@@ -28,12 +29,6 @@
     bottom: 0;
     left: 0;
     z-index: 10;
-
-    /* Word break auto */
-    -webkit-hyphens: auto;
-    -ms-hyphens: auto;
-    hyphens: auto;
-    overflow-wrap: normal; 
 
     /* Centering */
     text-align: center;

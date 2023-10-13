@@ -75,18 +75,19 @@ buttons specific customization */
 Planty bottom image aka "guirlande"
 ----------------------------------------------*/
 
-.planty-guirlande,
-.planty-guirlande figure {
-    margin-top: 0 !important;
-    margin-bottom: 0 !important;
+/* Maximum one Planty guirlande per page footer */
+#planty-guirlande,
+#planty-guirlande figure {
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
-.planty-guirlande figure {
+#planty-guirlande figure {
     height: 131px;
     width: 100%;
 }
 
-.planty-guirlande img {
+#planty-guirlande img {
     height: 100%;
     width: 100%;
     object-fit: cover;
@@ -105,22 +106,21 @@ block has a filled bacground or need full
 width.
 ----------------------------------------------*/
 
-.rounded-block-18px {
+/* Bottom of sable color blocks */
+.rounded-block-min {
     border-bottom-right-radius: 50% 18px;
     border-bottom-left-radius: 50% 18px;
 }
-
-.rounded-block-58px {
+.rounded-block-medium {
     border-bottom-right-radius: 50% 58px;
     border-bottom-left-radius: 50% 58px;
 }
-
-.rounded-block-72px {
+.rounded-block-max {
     border-bottom-right-radius: 50% 72px;
     border-bottom-left-radius: 50% 72px;
 }
 
-/* Bottom of the first block on main page */
+/* Shadow under sable color block */
 .bottom-shadow {
     border-bottom: 8px solid;
     border-color: var(--ombre-color);
@@ -719,7 +719,7 @@ Form global submit button
 Media queries
 ***********************************************/
 
-@media screen and (max-width: 720px) {
+@media screen and (max-width: 699px) {
     
     .accroche .page-title,
     .meet-us .page-title,
@@ -745,9 +745,38 @@ Media queries
         background-size: cover;
         background-position: center center;
     }
+
+    .rounded-block-medium {
+        border-bottom-right-radius: 50% 38px;
+        border-bottom-left-radius: 50% 38px;
+    }
+    .rounded-block-max {
+        border-bottom-right-radius: 50% 58px;
+        border-bottom-left-radius: 50% 58px;
+    }
     
-    .planty-guirlande figure {
-        height: 100px;
+    #planty-guirlande figure {
+        height: 91px;
+    }
+}
+
+@media screen and (max-width: 999px) {
+
+    .rounded-block-min {
+        border-bottom-right-radius: 50% 9px;
+        border-bottom-left-radius: 50% 9px;
+    }
+    .rounded-block-medium {
+        border-bottom-right-radius: 50% 18px;
+        border-bottom-left-radius: 50% 18px;
+    }
+    .rounded-block-max {
+        border-bottom-right-radius: 50% 38px;
+        border-bottom-left-radius: 50% 38px;
+    }
+            
+    #planty-guirlande figure {
+        height: 111px;
     }
 }
 

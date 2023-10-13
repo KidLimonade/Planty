@@ -18,6 +18,7 @@
     font-weight: 800;
     text-transform: uppercase;
     line-height: normal;
+    letter-spacing: normal;
     color:white;
 
     /* Over the whole image */
@@ -39,7 +40,7 @@
     Media queries
 ***********************************************/
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 700px) {
     
     .planty-gout-shortcode .title  {
     

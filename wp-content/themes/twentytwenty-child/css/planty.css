@@ -229,153 +229,207 @@ Footer special settings
 Page "Boisson énergisante naturelle"
 ***********************************************/
 
-/*----------------------------------------------
-Section d'accroche
-----------------------------------------------*/
+/*============================================*/
+/*  Page title
+/*============================================*/
 
-.accroche {
-    padding-top: 5.25em !important;
-    padding-bottom: 0 !important;
+#cover-main .page-title {
+    margin-top: 25px;
+    line-height: 45.6px;
 }
 
-/* Le titre accrocheur */
+/*============================================*/
+/*  Cover with Can of Planty energy drink
+/*============================================*/
 
-.accroche .page-title {
-    line-height: normal;
+#cover-main {
+    padding-bottom: 0;
 }
 
-/* La bannière avec canette et feuilles */
+/*---------- Section decoration ----------*/
 
-.accroche .cover {
+#cover-main .cover img {
     margin: auto;
+    width: 57%;
+    height: auto;
+    object-fit: contain;
 }
 
-.accroche .cover figure {
+#cover-main .cover figure {
     max-width: 700px;
     position: relative;
     z-index: 0;
 }
 
-.accroche .cover img {
-    margin: auto;
-    width: 56%;
-    height: auto;
-    object-fit: contain;
-}
-
-.accroche .cover figure::before {
+/* foliage on bottom left */
+#cover-main .cover figure::before {
     content: '';
     position: absolute;
     z-index: -10;
     width: 50%;
     height: 100%;
-    bottom: -38px;
-    left: -5px;
+    bottom: 12%;
+    left: 0;
     background-image: url('../img/feuilles-g.svg');
     background-repeat: no-repeat;
     background-size: contain;
-    background-position: center center;
+    background-position: bottom left;
 }
 
-.accroche .cover figure::after {
+/* foliage on bottom right */
+#cover-main .cover figure::after {
     content: '';
     position: absolute;
     z-index: -10;
     width: 50%;
     height: 100%;
-    right: 5px;
-    bottom: -38px;
+    right: 0;
+    bottom: 12%;
     background-image: url('../img/feuilles-d.svg');
     background-repeat: no-repeat;
     background-size: contain;
-    background-position: center center;
+    background-position: right bottom;
 }
 
-/*----------------------------------------------
-Section "L'énergie des plantes"
-----------------------------------------------*/
+/*============================================*/
+/*  Section "L'énergie des plantes"
+/*============================================*/
 
-.energie-plantes {
-    max-width: 496px !important;
-    margin-top: 72px !important;
-    margin-bottom: 84px !important;
-}
+/*---------- Section title ----------*/
 
-.energie-plantes h2 {
-    margin-bottom: 46px;
-}
-
-.energie-plantes p {
+#flower-power .planty-title {
+    margin-top: 72px;
     line-height: normal;
 }
 
-/*----------------------------------------------
-Section "Les goûts"
-----------------------------------------------*/
+/*---------- The power of plants ----------*/
 
-.planty-gouts {
-    padding-top: 2px !important;
-    padding-bottom: 48px !important;
+#flower-power .container {
+    max-width: 497px;
+    margin-top: 47px;
+    margin-bottom: 82px;
 }
 
-.planty-gouts h2 {
-    margin-bottom: 2px;
-    line-height: normal;
-}
-
-.planty-gouts p {
-    margin-bottom: 48px;
-}
-
-.planty-gouts .flavours {
-    max-width: 900px !important;
-    margin-bottom: 47px !important;
-    gap: 30px;
-}
-
-/*----------------------------------------------
-Section "CE QU’ILS EN PENSENT"
-----------------------------------------------*/
-
-.testimonials {
-    max-width: 1174px !important;
-    margin-top: 120px !important;
-    margin-bottom: 48px !important;
-}
-
-.testimonials h2 {
+#flower-power .container p {
     margin-top: 0;
     margin-bottom: 0;
 }
 
-.temoignages-clients {
-    margin-top: 0 !important;
-    margin-bottom: 0 !important;
-    padding: 0 8px !important;
+/*============================================*/
+/*  Section "LES GOÛTS"
+/*============================================*/
+
+#planty-flavours {
+
+    padding-bottom: 47px;
 }
 
-.temoignage-client .zone-txt {
+/*---------- Section title & subtitle ----------*/
+
+#planty-flavours .planty-title {
+    margin-top: 18px;
+    margin-bottom: 7px;
+    line-height: normal;
+}
+
+#planty-flavours p {
+    margin-top: 0;
+    margin-bottom: 49px;
+}
+
+/*---------- Available flavours ----------*/
+
+#planty-flavours .flavours {
+    max-width: 850px;
+    margin-bottom: 35px;
+    gap: 30px;
+}
+
+.flavours .planty-gout-shortcode {
+    margin-bottom: 10px;
+}
+
+/*============================================*/
+/*  Section "CE QU’ILS EN PENSENT"
+/*============================================*/
+
+/*---------- Section title ----------*/
+
+#testimonials .planty-title {
+    margin-top: 115px;
+    line-height: normal;
+}
+
+/*---------- Reduce vertical margins ----------*/
+
+#testimonials .customer-testimonials,
+#testimonials .customer-testimonials .customer-testimonial,   #testimonials .customer-testimonials .customer-testimonial figure {
+    margin-top: 0;
+    margin-bottom: 0;
+    background-color: antiquewhite;
+}
+
+/*---------- Customer testimonials ----------*/
+
+#testimonials .customer-testimonials {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 2px;
+}
+
+#testimonials .customer-testimonials .customer-testimonial {
+    gap: 0;
+}
+
+#testimonials .customer-testimonials .customer-testimonial figure {
+    min-width: 126px;
+    width: 126px;
+}
+
+#testimonials .customer-testimonials .customer-testimonial .content {
+    margin-top: 0;
+    margin-bottom: 0;
+    background-color: rgb(255, 127, 127);
+}
+
+#testimonials .customer-testimonials .customer-testimonial h3 {
+    line-height: normal;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+#testimonials .customer-testimonials .customer-testimonial .content .testimonial {
+    line-height: normal;
+    margin-top: 0;
+    margin-bottom: 0;
+/*    background-color: rgb(182, 255, 127);*/
+}
+
+/*
+.customer-testimonials .customer-testimonial .texte {
     min-width: 160px;
     width: 100%;
     gap: 7px;
     padding: 0 8px;
 }
 
-.temoignage-client .photo {
+.customer-testimonial .photo {
     min-width: 126px;
     min-height: 139px;
 }
 
-.temoignage-client .client{
+.customer-testimonial .customer{
     margin-top: 0 !important;
     margin-bottom: 0 !important;
 }
 
-.temoignage-client .temoignage {
+.customer-testimonial .testimonial {
     margin-top: 0;
     margin-bottom: 0;
     line-height: normal;
 }
+*/
 
 /***********************************************
 Page "Contacter équipe Planty"
@@ -449,7 +503,7 @@ Page "Contacter équipe Planty"
 }
 
 .planty-members .planty-member {
-    max-width: 320px;
+    max-width: 300px;
 }
 
 .planty-members .planty-member figure {
@@ -500,6 +554,7 @@ Page "Contacter équipe Planty"
 
 #contact-planty .planty-title {
     margin-top: -14px;
+    line-height: normal;
 }
 
 /*---------- Contact form ----------*/
@@ -766,7 +821,7 @@ Media queries
 
 @media screen and (max-width: 699px) {
     
-    .accroche .page-title,
+    #cover-main .page-title,
     #meet-planty .page-title,
     #planty-order .page-title {
         

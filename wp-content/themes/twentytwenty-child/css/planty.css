@@ -39,6 +39,8 @@ body {
     margin: auto;
     min-width: 320px;
     max-width: 1440px;
+
+    /* Override Twenty Twenty theme */
     letter-spacing: normal;
 }
 
@@ -438,6 +440,32 @@ Page "Contacter équipe Planty"
     line-height: normal;
 }
 
+/*---------- Team members ----------*/
+
+#planty-team .planty-members {
+    margin-top: 52px;
+    margin-bottom: 1px;
+    justify-content: center;
+}
+
+.planty-members .planty-member {
+    max-width: 320px;
+}
+
+.planty-members .planty-member figure {
+    margin-bottom: 20px;
+}
+
+.planty-members .planty-member img {
+    object-fit: contain;
+}
+
+.planty-members .planty-member p {
+    line-height: normal;
+    margin-top: 11px;
+    margin-bottom: 0;
+}
+
 /*---------- Section decoration ----------*/
 
 #planty-team {
@@ -460,89 +488,67 @@ Page "Contacter équipe Planty"
     background-position: right bottom;
 }
 
-/*---------- Team members ----------*/
-
-#planty-team .planty-members {
-    margin-top: 52px;
-    margin-bottom: 1px;
-    justify-content: center;
-}
-
-#planty-team .planty-members .planty-member {
-    max-width: 320px;
-}
-
-#planty-team .planty-members .planty-member figure {
-    margin-bottom: 20px;
-}
-
-#planty-team .planty-members .planty-member img {
-    object-fit: contain;
-}
-
-#planty-team .planty-members .planty-member p {
-    line-height: normal;
-    margin-top: 11px;
-    margin-bottom: 0;
-}
-
 /*============================================*/
 /*  Section "Nous contacter"
 /*============================================*/
 
 #contact-planty {
-    padding-bottom: 42px !important;
+    padding-bottom: 49px;
 }
 
-/*---------- Block title ----------*/
+/*---------- Section title ----------*/
 
 #contact-planty .planty-title {
     margin-top: -14px;
-    margin-bottom: 45px;
 }
 
 /*---------- Contact form ----------*/
 
 #contact-planty .contact-form {
     max-width: 383px;
+    margin-top: 45px;
+    margin-bottom: 24px;
+    text-align: center;
 }
 
 .contact-form .field {
-    position: relative;
-    z-index: 0;
     text-align: left;
     font-size: 1em;
+
+    position: relative;
+    z-index: 0;
 }
 
 .contact-form .field input {
     height: 71px;
     border-radius: 7px;
     margin-top: 13px;
+
+    margin-bottom: 22px;
 }
 
 .contact-form .field textarea {
     height: 237px;
     border-radius: 7px;
     margin-top: 13px;
+
     margin-bottom: 24px;
 }
+
+/*---------- Section decoration ----------*/
 
 .contact-form .field.decoration::before {
     content: '';
     position: absolute;
     z-index: -10;
     width: 185px;
-    height: 178px;
-    top: 146.6px;
-    right: 285.4px;
-    background-image: url('../img/baies.svg');
+    height: 100%;
+    bottom: -58px;
+    left: -87px;
+    background-image: url('../img/baies.png');
     background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
-}
-
-.contact-form:not(.field) {
-    text-align: center;
+    background-size: contain;
+    background-position: bottom left;
 }
 
 /***********************************************
@@ -734,15 +740,16 @@ Personal and delivery informations
 .order-form .field {
     text-align: left;
     font-size: 1em;
+
     color: var(--main-bg-color);
 }
 
 .order-form .field input {
-    width: 383px;
     height: 71px;
     border-radius: 7px;
     margin-top: 13px;
-    margin-bottom: 0;
+
+    max-width: 383px;
 }
 
 /*----------------------------------------------
@@ -780,7 +787,13 @@ Media queries
         width: 91px;
         right: 19px;
     }
-    
+
+    .contact-form .field.decoration::before {
+        width: 100px;
+        bottom: -29px;
+        left: -43px;
+    }
+        
     .rounded-block-min {
         border-bottom-right-radius: 50% 9px;
         border-bottom-left-radius: 50% 9px;

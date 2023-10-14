@@ -392,12 +392,14 @@ Page "Contacter équipe Planty"
 /*  Section "NOUS RENCONTRER"
 /*============================================*/
 
+/*---------- Section decoration ----------*/
+
 #meet-planty {
     position: relative;
     z-index: 0;
 }
 
-/* Flower decoration attached to top left */
+/* Flower attached to top left */
 #meet-planty::before {
     content: '';
     position: absolute;
@@ -411,6 +413,8 @@ Page "Contacter équipe Planty"
     background-size: contain;
     background-position: top left;
 }
+
+/*---------- Meet Planty ----------*/
 
 #meet-planty .container {
     max-width: 720px;
@@ -427,29 +431,18 @@ Page "Contacter équipe Planty"
 /*  Section "L'équipe"
 /*============================================*/
 
-#planty-team {
-    position: relative;
-    z-index: 0;
-}
+/*---------- Section title ----------*/
 
 #planty-team .planty-title {
     margin-top: -13px;
+    line-height: normal;
 }
 
-#planty-team .planty-members {
-    width: 75%;
-    margin-top: 67px;
-    margin-bottom: 1px;
-    background-color: #DC9F96;
-}
+/*---------- Section decoration ----------*/
 
-#planty-team .planty-members .planty-member figure {
-    margin-bottom: 20px;
-}
-
-#planty-team .planty-members .planty-member p:last-child {
-    margin-top: 11px;
-    margin-bottom: 0;
+#planty-team {
+    position: relative;
+    z-index: 0;
 }
 
 /* Foliage decoration attached to bottom right */
@@ -467,9 +460,35 @@ Page "Contacter équipe Planty"
     background-position: right bottom;
 }
 
-/*----------------------------------------------
-Section "Nous contacter"
-----------------------------------------------*/
+/*---------- Team members ----------*/
+
+#planty-team .planty-members {
+    margin-top: 52px;
+    margin-bottom: 1px;
+    justify-content: center;
+}
+
+#planty-team .planty-members .planty-member {
+    max-width: 320px;
+}
+
+#planty-team .planty-members .planty-member figure {
+    margin-bottom: 20px;
+}
+
+#planty-team .planty-members .planty-member img {
+    object-fit: contain;
+}
+
+#planty-team .planty-members .planty-member p {
+    line-height: normal;
+    margin-top: 11px;
+    margin-bottom: 0;
+}
+
+/*============================================*/
+/*  Section "Nous contacter"
+/*============================================*/
 
 #contact-planty {
     padding-bottom: 42px !important;
@@ -758,7 +777,7 @@ Media queries
     }
     
     #planty-team:after {
-        width: 111px;
+        width: 91px;
         right: 19px;
     }
     
@@ -789,7 +808,7 @@ Media queries
     }
     
     #planty-team:after {
-        width: 151px;
+        width: 141px;
         right: 39px;
     }
     

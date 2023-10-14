@@ -12,7 +12,7 @@ Override Twenty Twenty theme defaults if necessary
 
 /* Force h2 and h3 title to use site font */
 .planty-title {
-     font-family: 'Syne', sans-serif !important; 
+    font-family: 'Syne', sans-serif !important; 
 }
 
 .entry-content p {
@@ -379,96 +379,112 @@ Section "CE QU’ILS EN PENSENT"
 Page "Contacter équipe Planty"
 ***********************************************/
 
-/*----------------------------------------------
-Section "Nous rencontrer"
-----------------------------------------------*/
+/*============================================*/
+/*  Page title
+/*============================================*/
 
-.meet-us {
+#meet-planty .page-title {
+    margin-top: 106px;
+    line-height: 45.6px;
+}
+
+/*============================================*/
+/*  Section "NOUS RENCONTRER"
+/*============================================*/
+
+#meet-planty {
     position: relative;
     z-index: 0;
 }
 
-/* Flower decoration attached to block */
-.meet-us::before {
+/* Flower decoration attached to top left */
+#meet-planty::before {
     content: '';
     position: absolute;
     z-index: -10;
     width: 191px;
-    height: 170px;
+    height: 100%;
     top: 71px;
-    left: 10%;
+    left: 9.9%;
     background-image: url('../img/fleur.svg');
     background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
+    background-size: contain;
+    background-position: top left;
 }
 
-.meet-us .container {
+#meet-planty .container {
     max-width: 720px;
-    margin-top: 96px !important;
-    margin-bottom: 0 !important;
+    margin-top: 27px;
+    margin-bottom: -3px;
 }
 
-.meet-us .container p {
-    line-height: normal;
+#meet-planty .container p {
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
-/*----------------------------------------------
-Section "L'équipe"
-----------------------------------------------*/
+/*============================================*/
+/*  Section "L'équipe"
+/*============================================*/
 
-.planty-team {
+#planty-team {
     position: relative;
     z-index: 0;
 }
 
-/* Foliage decoration attached to top right */
-.planty-team:before {
+#planty-team .planty-title {
+    margin-top: -13px;
+}
+
+#planty-team .planty-members {
+    width: 75%;
+    margin-top: 67px;
+    margin-bottom: 1px;
+    background-color: #DC9F96;
+}
+
+#planty-team .planty-members .planty-member figure {
+    margin-bottom: 20px;
+}
+
+#planty-team .planty-members .planty-member p:last-child {
+    margin-top: 11px;
+    margin-bottom: 0;
+}
+
+/* Foliage decoration attached to bottom right */
+#planty-team:after {
     content: '';
     position: absolute;
     z-index: -10;
     width: 191px;
-    height: 219px;
+    height: 100%;
+    right: 59px;
     bottom: 0;
-    right: 0;
     background-image: url('../img/feuilles-g.svg');
     background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
-}
-
-.planty-team .planty-members {
-    width: 70%;
-    margin-top: -3em !important;
-}
-
-.planty-member .name {
-    margin-top: -1.5em;
-    margin-bottom: -0.4em;
-}
-
-.planty-member .role {
-    margin-bottom: 0.4em;
+    background-size: contain;
+    background-position: right bottom;
 }
 
 /*----------------------------------------------
 Section "Nous contacter"
 ----------------------------------------------*/
 
-.contact-planty {
+#contact-planty {
     padding-bottom: 42px !important;
 }
 
 /*---------- Block title ----------*/
 
-.contact-planty .block-title {
+#contact-planty .planty-title {
     margin-top: -14px;
     margin-bottom: 45px;
 }
 
 /*---------- Contact form ----------*/
 
-.contact-planty .contact-form {
+#contact-planty .contact-form {
     max-width: 383px;
 }
 
@@ -500,7 +516,10 @@ Section "Nous contacter"
     height: 178px;
     top: 146.6px;
     right: 285.4px;
-    background-image: url('../img/baies.png');
+    background-image: url('../img/baies.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
 }
 
 .contact-form:not(.field) {
@@ -522,32 +541,32 @@ input[type=number] {
 }
 
 /* section separators */
-.planty-order .horizontal-separator {
+#planty-order .horizontal-separator {
     width: 100%;
     height: 1px;
     background-color: var(--main-bg-color);
 }
-.planty-order .horizontal-separator.front {
+#planty-order .horizontal-separator.front {
     margin-bottom: 40px;
 }
-.planty-order .horizontal-separator.inside {
+#planty-order .horizontal-separator.inside {
     margin-bottom: 53px;
 }
 
-.planty-order .vertical-separator {
+#planty-order .vertical-separator {
     width: 1px;
     align-self: stretch;
     background-color: var(--main-bg-color);
 }
 
 /* Twenty Twenty theme customization */
-.planty-order .order-form .section-title.front {
+#planty-order .order-form .section-title.front {
     margin-bottom: 39px;
 }
-.planty-order .order-form p:not(.section-title) {
+#planty-order .order-form p:not(.section-title) {
     margin-bottom: 0;
 }
-.planty-order .order-form .section-title.inside {
+#planty-order .order-form .section-title.inside {
     margin-bottom: 29px;
 }
 
@@ -555,12 +574,12 @@ input[type=number] {
 /*  Page titles
 /*============================================*/
 
-.planty-order .page-title {
+#planty-order .page-title {
     margin-top: -11px;
     margin-bottom: 69px;
 }
 
-.planty-order .section-title {
+#planty-order .section-title {
     font-size: 1.5em;
     font-weight: 700;
     text-align: left;
@@ -571,7 +590,7 @@ input[type=number] {
 /*  Section order form
 /*============================================*/
 
-.planty-order .order-form {
+#planty-order .order-form {
     max-width: 860px;
     text-align: center;
 }
@@ -722,8 +741,8 @@ Media queries
 @media screen and (max-width: 699px) {
     
     .accroche .page-title,
-    .meet-us .page-title,
-    .planty-order .page-title {
+    #meet-planty .page-title,
+    #planty-order .page-title {
         
         /* Word break auto */
         -webkit-hyphens: auto;
@@ -732,36 +751,17 @@ Media queries
         overflow-wrap: normal; 
     }
     
-    .meet-us::before {
-        content: '';
-        position: absolute;
-        z-index: -10;
-        width: 96px;
-        height: 85px;
-        top: 35px;
-        left: 72px;
-        background-image: url('../img/fleur.svg');
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center center;
-    }
-
-    .rounded-block-medium {
-        border-bottom-right-radius: 50% 38px;
-        border-bottom-left-radius: 50% 38px;
-    }
-    .rounded-block-max {
-        border-bottom-right-radius: 50% 58px;
-        border-bottom-left-radius: 50% 58px;
+    #meet-planty::before {
+        width: 91px;
+        top: 10px;
+        left: 1%;
     }
     
-    #planty-guirlande figure {
-        height: 91px;
+    #planty-team:after {
+        width: 111px;
+        right: 19px;
     }
-}
-
-@media screen and (max-width: 999px) {
-
+    
     .rounded-block-min {
         border-bottom-right-radius: 50% 9px;
         border-bottom-left-radius: 50% 9px;
@@ -774,7 +774,38 @@ Media queries
         border-bottom-right-radius: 50% 38px;
         border-bottom-left-radius: 50% 38px;
     }
-            
+    
+    #planty-guirlande figure {
+        height: 91px;
+    }
+}
+
+@media screen and (min-width: 700px) and (max-width: 999px) {
+    
+    #meet-planty::before {
+        width: 141px;
+        top: 30px;
+        left: 5%;
+    }
+    
+    #planty-team:after {
+        width: 151px;
+        right: 39px;
+    }
+    
+    .rounded-block-min {
+        border-bottom-right-radius: 50% 18px;
+        border-bottom-left-radius: 50% 18px;
+    }
+    .rounded-block-medium {
+        border-bottom-right-radius: 50% 38px;
+        border-bottom-left-radius: 50% 38px;
+    }
+    .rounded-block-max {
+        border-bottom-right-radius: 50% 58px;
+        border-bottom-left-radius: 50% 58px;
+    }
+    
     #planty-guirlande figure {
         height: 111px;
     }

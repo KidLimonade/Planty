@@ -369,6 +369,7 @@ Page "Boisson énergisante naturelle"
 
 #testimonials .customer-testimonials {
     margin-top: 84px;
+    margin-bottom: 115px;
     justify-content: center;
 }
 
@@ -379,19 +380,11 @@ Page "Boisson énergisante naturelle"
     padding-right: 0;
     padding-left: 0;
     gap: 23px;
-    background-color: rgb(217, 255, 127);
 }
 
-#testimonials .customer-testimonials .customer-testimonial figure {
-    margin-top: 0;
-    margin-bottom: 0;
-}
-
-#testimonials .customer-testimonials .customer-testimonial .content {
-    margin-top: 0;
-    margin-bottom: 0;
-}
-
+/* reduce boxes in boxes in boxes... */
+#testimonials .customer-testimonials .customer-testimonial figure,
+#testimonials .customer-testimonials .customer-testimonial .content,
 #testimonials .customer-testimonials .customer-testimonial .firstname {
     margin-top: 0;
     margin-bottom: 0;

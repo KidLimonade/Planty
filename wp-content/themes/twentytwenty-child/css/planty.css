@@ -54,6 +54,7 @@ submit buttons shared customization */
 #planty-form-submit-button {
     font-size: 15px;
     font-weight: 400;
+    letter-spacing: normal;
     line-height: 37px;
     padding: 9px 56px;
     border-radius: 5px;
@@ -300,6 +301,8 @@ Page "Boisson énergisante naturelle"
 #flower-power .planty-title {
     margin-top: 72px;
     line-height: normal;
+    letter-spacing: normal;
+
 }
 
 /*---------- The power of plants ----------*/
@@ -330,6 +333,7 @@ Page "Boisson énergisante naturelle"
     margin-top: 18px;
     margin-bottom: 7px;
     line-height: normal;
+    letter-spacing: normal;
 }
 
 #planty-flavours p {
@@ -358,78 +362,45 @@ Page "Boisson énergisante naturelle"
 #testimonials .planty-title {
     margin-top: 115px;
     line-height: normal;
-}
-
-/*---------- Reduce vertical margins ----------*/
-
-#testimonials .customer-testimonials,
-#testimonials .customer-testimonials .customer-testimonial,   #testimonials .customer-testimonials .customer-testimonial figure {
-    margin-top: 0;
-    margin-bottom: 0;
-    background-color: antiquewhite;
+    letter-spacing: normal;
 }
 
 /*---------- Customer testimonials ----------*/
 
 #testimonials .customer-testimonials {
-    display: flex;
-    flex-direction: row;
+    margin-top: 84px;
     justify-content: center;
-    gap: 2px;
 }
 
 #testimonials .customer-testimonials .customer-testimonial {
-    gap: 0;
+    max-width: 360px;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-right: 0;
+    padding-left: 0;
+    gap: 23px;
+    background-color: rgb(217, 255, 127);
 }
 
 #testimonials .customer-testimonials .customer-testimonial figure {
-    min-width: 126px;
-    width: 126px;
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
 #testimonials .customer-testimonials .customer-testimonial .content {
     margin-top: 0;
     margin-bottom: 0;
-    background-color: rgb(255, 127, 127);
 }
 
-#testimonials .customer-testimonials .customer-testimonial h3 {
-    line-height: normal;
+#testimonials .customer-testimonials .customer-testimonial .firstname {
     margin-top: 0;
     margin-bottom: 0;
 }
 
-#testimonials .customer-testimonials .customer-testimonial .content .testimonial {
-    line-height: normal;
-    margin-top: 0;
+#testimonials .customer-testimonials .customer-testimonial .testimonial {
+    margin-top: 11px;
     margin-bottom: 0;
-/*    background-color: rgb(182, 255, 127);*/
 }
-
-/*
-.customer-testimonials .customer-testimonial .texte {
-    min-width: 160px;
-    width: 100%;
-    gap: 7px;
-    padding: 0 8px;
-}
-
-.customer-testimonial .photo {
-    min-width: 126px;
-    min-height: 139px;
-}
-
-.customer-testimonial .customer{
-    margin-top: 0 !important;
-    margin-bottom: 0 !important;
-}
-
-.customer-testimonial .testimonial {
-    margin-top: 0;
-    margin-bottom: 0;
-    line-height: normal;
-}
-*/
 
 /***********************************************
 Page "Contacter équipe Planty"
@@ -442,6 +413,7 @@ Page "Contacter équipe Planty"
 #meet-planty .page-title {
     margin-top: 106px;
     line-height: 45.6px;
+    letter-spacing: normal;
 }
 
 /*============================================*/
@@ -492,6 +464,7 @@ Page "Contacter équipe Planty"
 #planty-team .planty-title {
     margin-top: -13px;
     line-height: normal;
+    letter-spacing: normal;
 }
 
 /*---------- Team members ----------*/
@@ -555,6 +528,7 @@ Page "Contacter équipe Planty"
 #contact-planty .planty-title {
     margin-top: -14px;
     line-height: normal;
+    letter-spacing: normal;
 }
 
 /*---------- Contact form ----------*/
@@ -769,6 +743,7 @@ into the file 'planty-gout-shortcode.css' */
 .order-form .ok-button {
     font-size: 15px;
     font-weight: 400;
+    letter-spacing: normal;
     width: 100px;
     height: 56px;
     border-radius: 7px;

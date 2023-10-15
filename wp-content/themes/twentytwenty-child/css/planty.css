@@ -1,27 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&display=swap');
-/* 'Syne' font loaded and applied to every elements (except counter) */
-* { font-family: 'Syne', sans-serif; }
 
-/***********************************************
+/****************************************************
 General settings
-***********************************************/
+****************************************************/
 
-/*----------------------------------------------
-Override Twenty Twenty theme defaults if necessary
-----------------------------------------------*/
-
-/* Force h2 and h3 title to use site font */
-.planty-title {
-    font-family: 'Syne', sans-serif !important; 
-}
-
-.entry-content p {
-    line-height: 1.2em;
-}
-
-/*----------------------------------------------
+/*-----------------------------------------
 Planty colors & size
-----------------------------------------------*/
+-----------------------------------------*/
 
 /* CSS colors reflecting customized 'theme.json' */
 :root {
@@ -39,16 +24,28 @@ body {
     margin: auto;
     min-width: 320px;
     max-width: 1440px;
+}
 
-    /* Override Twenty Twenty theme */
+/*-----------------------------------------
+Override Twenty Twenty theme defaults if necessary
+-----------------------------------------*/
+
+/* 'Syne' font loaded and applied to every 
+elements (except quantity counter) */
+*, #page-title {
+    font-family: 'Syne', sans-serif;
+}
+
+.entry-content p {
+    line-height: 1.2em;
     letter-spacing: normal;
 }
 
-/*----------------------------------------------
-Planty  button
-----------------------------------------------*/
+/*-----------------------------------------
+Planty button (Twenty Twenty theme and Planty CF7
+-----------------------------------------*/
 
-/*  WordPress and Planty Form 7
+/*  WordPress and Planty Contact Form 7
 submit buttons shared customization */
 .wp-block-button .wp-block-button__link.wp-element-button,
 #planty-form-submit-button {
@@ -68,15 +65,15 @@ submit buttons shared customization */
     background-color: var(--clairet-color);
 }
 
-/*  Planty Form 7 submit
+/*  Planty Contact Form 7 submit
 buttons specific customization */
 #planty-form-submit-button {
     width: 198px;
 }
 
-/*----------------------------------------------
+/*-----------------------------------------
 Planty bottom image aka "guirlande"
-----------------------------------------------*/
+-----------------------------------------*/
 
 /* Maximum one Planty guirlande per page footer */
 #planty-guirlande,
@@ -96,18 +93,20 @@ Planty bottom image aka "guirlande"
     object-fit: cover;
 }
 
+/* In case of planty guirlande is under a 
+sable background last block of a page */
 .sable-background {
     background-color: var(--sable-color);
 }
 
-/*----------------------------------------------
+/*-----------------------------------------
 Planty custom blocks
 
 Class 'alignfull' added with Gutenberg in
 "CLASSE(S) CSS ADDITIONNELLE(S)" field when
 block has a filled bacground or need full
 width.
-----------------------------------------------*/
+-----------------------------------------*/
 
 /* Bottom of sable color blocks */
 .rounded-block-min {
@@ -125,13 +124,12 @@ width.
 
 /* Shadow under sable color block */
 .bottom-shadow {
-    border-bottom: 8px solid;
-    border-color: var(--ombre-color);
+    border-bottom: 8px solid var(--ombre-color);
 }
 
-/*----------------------------------------------
+/*-----------------------------------------
 Twenty Twenty theme & plugins simplification
-----------------------------------------------*/
+-----------------------------------------*/
 
 .post-meta-edit-link-wrapper,
 main article header.entry-header,
@@ -141,29 +139,32 @@ main article header.entry-header,
     display: none;
 }
 
-/***********************************************
+/****************************************************
 Header & footer settings
-***********************************************/
+****************************************************/
 
-li.menu-item a,
-.privacy-policy-link {
+#site-header li.menu-item a,
+#site-footer .privacy-policy-link {
     font-size: 16px;
     font-weight: 400;
     letter-spacing: 0;
-    color: var(--main-color) !important;
-    text-decoration: none !important;
+    color: var(--main-color);
+    text-decoration: none;
+    transition: none;
 }
-li.menu-item a:hover,
-li.menu-item.current-menu-item a,
-.privacy-policy-link:hover {
+#site-header li.menu-item a:hover,
+#site-header li.menu-item.current-menu-item a,
+#site-footer .privacy-policy-link:hover {
     font-size: 13px;
     font-weight: 700;
     letter-spacing: 0;
+    text-decoration: none;
+    transition: none;
 }
 
-/*----------------------------------------------
+/*-----------------------------------------
 Header special settings
-----------------------------------------------*/
+-----------------------------------------*/
 
 /* Child theme customization */
 
@@ -183,17 +184,17 @@ ul.primary-menu {
 
 /* N - 1 menu items with theme :hover standard */
 /* Last menu item with child theme :hover cutomization */
-.primary-menu li:last-of-type a {
+#site-header .primary-menu li:last-of-type a {
     font-size: 16px;
     font-weight: 700;
     letter-spacing: 0;
     line-height: 80px;
     padding-left: 60px;
     padding-right: 20px;
-    color: var(--main-bg-color) !important;
+    color: var(--main-bg-color);
 }
 
-.primary-menu li:last-of-type a::before {
+#site-header .primary-menu li:last-of-type a::before {
     content: '';
     background-color: var(--saumon-color);
     position: absolute;
@@ -207,9 +208,9 @@ ul.primary-menu {
     background-color: var(--clairet-color);
 }
 
-/*----------------------------------------------
+/*-----------------------------------------
 Footer special settings
-----------------------------------------------*/
+-----------------------------------------*/
 
 /* Child theme customization */
 
@@ -226,15 +227,15 @@ Footer special settings
     margin: 0;
 }
 
-/***********************************************
+/****************************************************
 Page "Boisson énergisante naturelle"
-***********************************************/
+****************************************************/
 
 /*============================================*/
 /*  Page title
 /*============================================*/
 
-#cover-main .page-title {
+#cover-main #page-title {
     margin-top: 25px;
     line-height: 45.6px;
 }
@@ -302,7 +303,7 @@ Page "Boisson énergisante naturelle"
     margin-top: 72px;
     line-height: normal;
     letter-spacing: normal;
-
+    font-family: 'Syne', sans-serif;
 }
 
 /*---------- The power of plants ----------*/
@@ -323,7 +324,6 @@ Page "Boisson énergisante naturelle"
 /*============================================*/
 
 #planty-flavours {
-
     padding-bottom: 47px;
 }
 
@@ -334,6 +334,7 @@ Page "Boisson énergisante naturelle"
     margin-bottom: 7px;
     line-height: normal;
     letter-spacing: normal;
+    font-family: 'Syne', sans-serif;
 }
 
 #planty-flavours p {
@@ -363,6 +364,7 @@ Page "Boisson énergisante naturelle"
     margin-top: 115px;
     line-height: normal;
     letter-spacing: normal;
+    font-family: 'Syne', sans-serif;
 }
 
 /*---------- Customer testimonials ----------*/
@@ -384,10 +386,15 @@ Page "Boisson énergisante naturelle"
 
 /* reduce boxes in boxes in boxes... */
 #testimonials .customer-testimonials .customer-testimonial figure,
-#testimonials .customer-testimonials .customer-testimonial .content,
-#testimonials .customer-testimonials .customer-testimonial .firstname {
+#testimonials .customer-testimonials .customer-testimonial .content {
     margin-top: 0;
     margin-bottom: 0;
+}
+
+#testimonials .customer-testimonials .customer-testimonial .planty-title {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-family: 'Syne', sans-serif;
 }
 
 #testimonials .customer-testimonials .customer-testimonial .testimonial {
@@ -395,15 +402,15 @@ Page "Boisson énergisante naturelle"
     margin-bottom: 0;
 }
 
-/***********************************************
+/****************************************************
 Page "Contacter équipe Planty"
-***********************************************/
+****************************************************/
 
 /*============================================*/
 /*  Page title
 /*============================================*/
 
-#meet-planty .page-title {
+#meet-planty #page-title {
     margin-top: 106px;
     line-height: 45.6px;
     letter-spacing: normal;
@@ -458,6 +465,7 @@ Page "Contacter équipe Planty"
     margin-top: -13px;
     line-height: normal;
     letter-spacing: normal;
+    font-family: 'Syne', sans-serif;
 }
 
 /*---------- Team members ----------*/
@@ -522,6 +530,7 @@ Page "Contacter équipe Planty"
     margin-top: -14px;
     line-height: normal;
     letter-spacing: normal;
+    font-family: 'Syne', sans-serif;
 }
 
 /*---------- Contact form ----------*/
@@ -536,7 +545,6 @@ Page "Contacter équipe Planty"
 .contact-form .field {
     text-align: left;
     font-size: 1em;
-
     position: relative;
     z-index: 0;
 }
@@ -545,7 +553,6 @@ Page "Contacter équipe Planty"
     height: 71px;
     border-radius: 7px;
     margin-top: 13px;
-
     margin-bottom: 22px;
 }
 
@@ -553,7 +560,6 @@ Page "Contacter équipe Planty"
     height: 237px;
     border-radius: 7px;
     margin-top: 13px;
-
     margin-bottom: 24px;
 }
 
@@ -573,9 +579,9 @@ Page "Contacter équipe Planty"
     background-position: bottom left;
 }
 
-/***********************************************
+/****************************************************
 Page "Commander"
-***********************************************/
+****************************************************/
 
 /* Hide 'number' field type native controls */
 input::-webkit-inner-spin-button,
@@ -621,7 +627,7 @@ input[type=number] {
 /*  Page titles
 /*============================================*/
 
-#planty-order .page-title {
+#planty-order #page-title {
     margin-top: -11px;
     margin-bottom: 69px;
 }
@@ -642,14 +648,15 @@ input[type=number] {
     text-align: center;
 }
 
-/*----------------------------------------------
+/*-----------------------------------------
 Order quantities for each flavour
-----------------------------------------------*/
+-----------------------------------------*/
 
 .order-form .flavours {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 28px;
     flex-wrap: wrap;
 }
 
@@ -748,9 +755,9 @@ into the file 'planty-gout-shortcode.css' */
     background-color: var(--clairet-color);
 }
 
-/*----------------------------------------------
+/*-----------------------------------------
 Personal and delivery informations
-----------------------------------------------*/
+-----------------------------------------*/
 
 .order-form .order-infos {
     display: flex;
@@ -763,7 +770,6 @@ Personal and delivery informations
 .order-form .field {
     text-align: left;
     font-size: 1em;
-
     color: var(--main-bg-color);
 }
 
@@ -771,52 +777,24 @@ Personal and delivery informations
     height: 71px;
     border-radius: 7px;
     margin-top: 13px;
-
     max-width: 383px;
 }
 
-/*----------------------------------------------
+/*-----------------------------------------
 Form global submit button
-----------------------------------------------*/
+-----------------------------------------*/
 
 .order-form #planty-form-submit-button {
-    margin-bottom: -7px;
+    margin-bottom: -27px;
 }
 
-/***********************************************
+/****************************************************
 Media queries
-***********************************************/
+****************************************************/
 
 @media screen and (max-width: 699px) {
     
-    #cover-main .page-title,
-    #meet-planty .page-title,
-    #planty-order .page-title {
-        
-        /* Word break auto */
-        -webkit-hyphens: auto;
-        -ms-hyphens: auto;
-        hyphens: auto;
-        overflow-wrap: normal; 
-    }
-    
-    #meet-planty::before {
-        width: 91px;
-        top: 10px;
-        left: 1%;
-    }
-    
-    #planty-team:after {
-        width: 91px;
-        right: 19px;
-    }
-
-    .contact-form .field.decoration::before {
-        width: 100px;
-        bottom: -29px;
-        left: -43px;
-    }
-        
+    /*========== Common ==========*/
     .rounded-block-min {
         border-bottom-right-radius: 50% 9px;
         border-bottom-left-radius: 50% 9px;
@@ -833,21 +811,34 @@ Media queries
     #planty-guirlande figure {
         height: 91px;
     }
+    
+    /*========== Page "Contacter équipe Planty" ==========*/
+    #meet-planty::before {
+        width: 91px;
+        top: 10px;
+        left: 1%;
+    }
+    
+    #planty-team:after {
+        width: 91px;
+        right: 19px;
+    }
+    
+    .contact-form .field.decoration::before {
+        width: 100px;
+        bottom: -29px;
+        left: -43px;
+    }
+    
+    /*========== Page "Commander" ==========*/
+    #planty-order .vertical-separator {
+        display: none;
+    }
 }
 
 @media screen and (min-width: 700px) and (max-width: 999px) {
     
-    #meet-planty::before {
-        width: 141px;
-        top: 30px;
-        left: 5%;
-    }
-    
-    #planty-team:after {
-        width: 141px;
-        right: 39px;
-    }
-    
+    /*========== Common ==========*/
     .rounded-block-min {
         border-bottom-right-radius: 50% 18px;
         border-bottom-left-radius: 50% 18px;
@@ -864,8 +855,21 @@ Media queries
     #planty-guirlande figure {
         height: 111px;
     }
+    
+    /*========== Page "Contacter équipe Planty" ==========*/    
+    #meet-planty::before {
+        width: 141px;
+        top: 30px;
+        left: 5%;
+    }
+    
+    #planty-team:after {
+        width: 141px;
+        right: 39px;
+    }
+    
+    /*========== Page "Commander" ==========*/
+    #planty-order .vertical-separator {
+        display: none;
+    }
 }
-
-/* SANDBOX */
-
-

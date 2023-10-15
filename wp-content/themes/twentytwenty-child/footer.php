@@ -4,7 +4,8 @@
 */
 
 ?>
-<footer id="site-footer" class="header-footer-group">
+<!-- site-footer become planty-footer -->
+<footer id="planty-footer" class="header-footer-group">
     
     <div class="footer-inner">
         

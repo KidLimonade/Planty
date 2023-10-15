@@ -42,7 +42,7 @@ elements (except quantity counter) */
 }
 
 /*-----------------------------------------
-Planty button (Twenty Twenty theme and Planty CF7
+Planty button (Twenty Twenty theme and Planty CF7)
 -----------------------------------------*/
 
 /*  WordPress and Planty Contact Form 7
@@ -63,6 +63,8 @@ submit buttons shared customization */
 .wp-block-button .wp-block-button__link.wp-element-button:hover,
 #planty-form-submit-button:hover {
     background-color: var(--clairet-color);
+    text-decoration: none;
+    text-transform: none;
 }
 
 /*  Planty Contact Form 7 submit
@@ -104,7 +106,7 @@ Planty custom blocks
 
 Class 'alignfull' added with Gutenberg in
 "CLASSE(S) CSS ADDITIONNELLE(S)" field when
-block has a filled bacground or need full
+block has a filled background or need full
 width.
 -----------------------------------------*/
 
@@ -143,8 +145,14 @@ main article header.entry-header,
 Header & footer settings
 ****************************************************/
 
+/*============================================*/
+/*  Common menu links
+/*============================================*/
+
+/*---------- Navigation menu ----------*/
+
 #site-header li.menu-item a,
-#site-footer .privacy-policy-link {
+#planty-footer .privacy-policy-link {
     font-size: 16px;
     font-weight: 400;
     letter-spacing: 0;
@@ -154,7 +162,7 @@ Header & footer settings
 }
 #site-header li.menu-item a:hover,
 #site-header li.menu-item.current-menu-item a,
-#site-footer .privacy-policy-link:hover {
+#planty-footer .privacy-policy-link:hover {
     font-size: 13px;
     font-weight: 700;
     letter-spacing: 0;
@@ -162,11 +170,28 @@ Header & footer settings
     transition: none;
 }
 
-/*-----------------------------------------
-Header special settings
------------------------------------------*/
+/*---------- Mobile menu ----------*/
 
-/* Child theme customization */
+.menu-modal li.menu-item a {
+    font-weight: 400;
+    letter-spacing: 0;
+    color: var(--main-color);
+    text-decoration: none;
+    transition: none;
+}
+.menu-modal li.menu-item a:hover,
+.menu-modal li.menu-item.current-menu-item a {
+    font-weight: 700;
+    letter-spacing: 0;
+    text-decoration: none;
+    transition: none;
+}
+
+/*============================================*/
+/*  Header special settings
+/*============================================*/
+
+/*---------- Child theme customization ----------*/
 
 #site-header > .header-inner {
     height: 80px;
@@ -182,8 +207,10 @@ ul.primary-menu {
     gap: 30px;
 }
 
-/* N - 1 menu items with theme :hover standard */
-/* Last menu item with child theme :hover cutomization */
+/*---------- Custom last menu item  ----------*/
+
+/* n - 1 menu items with theme standard :hover
+Last menu item with child theme :hover */
 #site-header .primary-menu li:last-of-type a {
     font-size: 16px;
     font-weight: 700;
@@ -208,13 +235,11 @@ ul.primary-menu {
     background-color: var(--clairet-color);
 }
 
-/*-----------------------------------------
-Footer special settings
------------------------------------------*/
+/*============================================*/
+/*  Footer special settings
+/*============================================*/
 
-/* Child theme customization */
-
-#site-footer.header-footer-group {
+#planty-footer.header-footer-group {
     margin: 0;
     height: 60px;
     border: none;
@@ -223,7 +248,7 @@ Footer special settings
     align-items: center;
 }
 
-.privacy-policy {
+#planty-footer .privacy-policy {
     margin: 0;
 }
 

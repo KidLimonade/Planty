@@ -608,16 +608,6 @@ Page "Contacter équipe Planty"
 Page "Commander"
 ****************************************************/
 
-/* Hide 'number' field type native controls */
-input::-webkit-inner-spin-button,
-input::-webkit-outer-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
-}
-input[type=number] {
-    -moz-appearance: textfield;
-}
-
 /* section separators */
 #planty-order .horizontal-separator {
     width: 100%;
@@ -681,7 +671,7 @@ Order quantities for each flavour
     display: flex;
     flex-direction: row;
     justify-content: center;
-    gap: 28px;
+    gap: 27px;
     flex-wrap: wrap;
 }
 
@@ -720,22 +710,22 @@ into the file 'planty-gout-shortcode.css' */
 
 .order-form .wpcf7-form-control.qty-counter {
     font-size: 16px;
-    width: 51px;
+    width: 82px;
     height: 56px;
     padding-left: 0;
-    padding-right: 0;
+    padding-right: 14px;
     text-align: center;
-    border-top-left-radius: 7px;
-    border-bottom-left-radius: 7px;
+    border-radius: 7px;
 }
 
 /* Shared config. for '+' and '-' buttons */
 .order-form .inc-btn,
 .order-form .dec-btn {
+    position: absolute;
+    right: 0;
     font-size: 20px;
     font-weight: 400;
     width: 31px;
-    height: 28px;
     padding: 0;
     text-align: center;
     background-color: var(--saumon-color);
@@ -748,18 +738,15 @@ into the file 'planty-gout-shortcode.css' */
 
 /* Specific config. for '+' button */
 .order-form .inc-btn {
-    border-bottom: 1px solid var(--main-bg-color);
+    height: 27px;
     border-top-right-radius: 7px;
-    position: absolute;
     top: 0;
-    right: 0;
 }
 
 /* Specific config. for '-' button */
 .order-form .dec-btn {
+    height: 28px;
     border-bottom-right-radius: 7px;
-    position: absolute;
-    right: 0;
     bottom: 0;
 }
 

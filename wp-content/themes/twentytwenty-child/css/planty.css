@@ -8,7 +8,7 @@ General settings
 Planty colors & size
 -----------------------------------------*/
 
-/* CSS colors reflecting customized 'theme.json' */
+/* CSS colors used from customized 'theme.json' */
 :root {
     --main-color: #000;
     --main-bg-color: #FFF;
@@ -27,11 +27,10 @@ body {
 }
 
 /*-----------------------------------------
-Override Twenty Twenty theme defaults if necessary
+Override Twenty Twenty theme defaults
 -----------------------------------------*/
 
-/* 'Syne' font loaded and applied to every 
-elements (except quantity counter) */
+/* 'Syne' font applied to every elements */
 *, #page-title {
     font-family: 'Syne', sans-serif;
 }
@@ -42,7 +41,7 @@ elements (except quantity counter) */
 }
 
 /*-----------------------------------------
-Planty button (Twenty Twenty theme and Planty CF7)
+Button (Twenty Twenty theme and Planty CF7)
 -----------------------------------------*/
 
 /*  WordPress and Planty Contact Form 7
@@ -51,11 +50,11 @@ submit buttons shared customization */
 #planty-form-submit-button {
     font-size: 15px;
     font-weight: 400;
-    letter-spacing: normal;
     line-height: 37px;
-    padding: 9px 56px;
+    padding: 9px 57px 9px 56px;
     border-radius: 5px;
     color: var(--main-bg-color);
+    letter-spacing: normal;
     background-color: var(--rose-provence-color);
     text-decoration: none;
     text-transform: none;
@@ -65,12 +64,6 @@ submit buttons shared customization */
     background-color: var(--clairet-color);
     text-decoration: none;
     text-transform: none;
-}
-
-/*  Planty Contact Form 7 submit
-buttons specific customization */
-#planty-form-submit-button {
-    width: 198px;
 }
 
 /*-----------------------------------------
@@ -130,7 +123,7 @@ width.
 }
 
 /*-----------------------------------------
-Twenty Twenty theme & plugins simplification
+Twenty Twenty theme & CF7 simplification
 -----------------------------------------*/
 
 .post-meta-edit-link-wrapper,
@@ -263,6 +256,7 @@ Page "Boisson énergisante naturelle"
 #cover-main #page-title {
     margin-top: 25px;
     line-height: 45.6px;
+    letter-spacing: normal;
 }
 
 /*============================================*/
@@ -604,22 +598,37 @@ Page "Contacter équipe Planty"
     background-position: bottom left;
 }
 
+/*---------- "Envoyer" button ----------*/
+
+.contact-form #planty-form-submit-button {
+    width: 198px;
+}
+
+
 /****************************************************
 Page "Commander"
 ****************************************************/
 
-/* section separators */
+/*============================================*/
+/*  Components
+/*============================================*/
+
+/* ========== Separators ========== */
+
+/*---------- Horizontal separator ----------*/
+
 #planty-order .horizontal-separator {
     width: 100%;
     height: 1px;
     background-color: var(--main-bg-color);
 }
-#planty-order .horizontal-separator.front {
-    margin-bottom: 40px;
-}
+
+/* "Vos informations" & "Livraison" separator */
 #planty-order .horizontal-separator.inside {
     margin-bottom: 53px;
 }
+
+/*---------- Vertical separator ----------*/
 
 #planty-order .vertical-separator {
     width: 1px;
@@ -627,24 +636,55 @@ Page "Commander"
     background-color: var(--main-bg-color);
 }
 
-/* Twenty Twenty theme customization */
-#planty-order .order-form .section-title.front {
-    margin-bottom: 39px;
+/* ========== Number adjust button ========== */
+
+#planty-order .small-btn {
+    font-size: 20px;
+    font-weight: 400;
+    width: 31px;
+    padding: 0;
+    text-align: center;
+    background-color: var(--saumon-color);
+    text-decoration: none;
+    position: absolute;
 }
-#planty-order .order-form p:not(.section-title) {
-    margin-bottom: 0;
+#planty-order .small-btn:hover {
+    background-color: var(--clairet-color);
 }
-#planty-order .order-form .section-title.inside {
-    margin-bottom: 29px;
+
+/* ========== Cart OK button ========== */
+
+#planty-order .ok-button {
+    font-size: 15px;
+    font-weight: 400;
+    width: 100px;
+    line-height: 37px;
+    padding-top: 9px;
+    padding-bottom: 10px;
+    border-radius: 5px;
+    letter-spacing: normal;
+    background-color: var(--rose-provence-color);
+    text-decoration: none;
+    text-transform: uppercase;
+}
+#planty-order .ok-button:hover {
+    background-color: var(--clairet-color);
 }
 
 /*============================================*/
-/*  Page titles
+/*  Page titles & form
 /*============================================*/
 
 #planty-order #page-title {
     margin-top: -11px;
+    line-height: 45.6px;
+    letter-spacing: normal;
     margin-bottom: 69px;
+}
+
+#planty-order .order-form {
+    max-width: 860px;
+    text-align: center;
 }
 
 #planty-order .section-title {
@@ -655,31 +695,37 @@ Page "Commander"
 }
 
 /*============================================*/
-/*  Section order form
+/*  Section "Votre commande"
 /*============================================*/
 
-#planty-order .order-form {
-    max-width: 860px;
-    text-align: center;
+#your-command .section-title {
+    margin-top: 40px;
+    margin-bottom: 39px;
 }
+
+#your-command .qty-by-flavour {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+#your-command .flavour {
+    width: 193px;
+}
+
+
+
+
+
+
+
 
 /*-----------------------------------------
 Order quantities for each flavour
 -----------------------------------------*/
 
-.order-form .flavours {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    gap: 27px;
-    flex-wrap: wrap;
-}
-
 /* ========== Flavour vertical block ========== */
-
-.order-form .flavour {
-    width: 193px;
-}
 
 /*  Covers with image and text are shared with the
 shortcode defined in 'functions.php' and styled
@@ -698,7 +744,8 @@ into the file 'planty-gout-shortcode.css' */
 .order-form .flavour-quantity {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 11px;
     margin-bottom: 40px;
 }
 
@@ -718,58 +765,25 @@ into the file 'planty-gout-shortcode.css' */
     border-radius: 7px;
 }
 
-/* Shared config. for '+' and '-' buttons */
-.order-form .inc-btn,
-.order-form .dec-btn {
-    position: absolute;
-    right: 0;
-    font-size: 20px;
-    font-weight: 400;
-    width: 31px;
-    padding: 0;
-    text-align: center;
-    background-color: var(--saumon-color);
-    text-decoration: none;
-}
-.order-form .inc-btn:hover,
-.order-form .dec-btn:hover {
-    background-color: var(--clairet-color);
-}
-
 /* Specific config. for '+' button */
-.order-form .inc-btn {
+.order-form .small-btn.inc {
     height: 27px;
     border-top-right-radius: 7px;
     top: 0;
+    right: 0;
 }
 
 /* Specific config. for '-' button */
-.order-form .dec-btn {
+.order-form .small-btn.dec {
     height: 28px;
     border-bottom-right-radius: 7px;
+    right: 0;
     bottom: 0;
 }
 
-/* ---------- Flavour 'Ok' button ---------- */
-
-.order-form .ok-button {
-    font-size: 15px;
-    font-weight: 400;
-    letter-spacing: normal;
-    width: 100px;
-    height: 56px;
-    border-radius: 7px;
-    background-color: var(--rose-provence-color);
-    text-decoration: none;
-    text-transform: uppercase;
-}
-.order-form .ok-button:hover {
-    background-color: var(--clairet-color);
-}
-
-/*-----------------------------------------
-Personal and delivery informations
------------------------------------------*/
+/*============================================*/
+/*  Sections "Vos Informations" & "Livraison"
+/*============================================*/
 
 .order-form .order-infos {
     display: flex;
@@ -843,6 +857,11 @@ Media queries
     }
     
     /*========== Page "Commander" ==========*/
+
+    #your-command .flavour {
+        flex-basis: 100%;
+    }
+
     #planty-order .vertical-separator {
         display: none;
     }
@@ -881,6 +900,10 @@ Media queries
     }
     
     /*========== Page "Commander" ==========*/
+    #your-command .flavour {
+        flex-basis: 50%;
+    }
+
     #planty-order .vertical-separator {
         display: none;
     }

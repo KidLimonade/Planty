@@ -604,7 +604,6 @@ Page "Contacter équipe Planty"
     width: 198px;
 }
 
-
 /****************************************************
 Page "Commander"
 ****************************************************/
@@ -615,22 +614,13 @@ Page "Commander"
 
 /* ========== Separators ========== */
 
-/*---------- Horizontal separator ----------*/
-
 #planty-order .horizontal-separator {
     width: 100%;
     height: 1px;
     background-color: var(--main-bg-color);
 }
 
-/* "Vos informations" & "Livraison" separator */
-#planty-order .horizontal-separator.inside {
-    margin-bottom: 53px;
-}
-
-/*---------- Vertical separator ----------*/
-
-#planty-order .vertical-separator {
+#planty-order .stretchable-separator {
     width: 1px;
     align-self: stretch;
     background-color: var(--main-bg-color);
@@ -710,52 +700,37 @@ Page "Commander"
     flex-wrap: wrap;
 }
 
-#your-command .flavour {
+/*--------------------------------------------*/
+/*  Order quantities for each flavour
+/*--------------------------------------------*/
+
+/* ---------- Cover image and text ---------- */
+
+#your-command .flavour .planty-gout-shortcode img {
     width: 193px;
-}
-
-
-
-
-
-
-
-
-/*-----------------------------------------
-Order quantities for each flavour
------------------------------------------*/
-
-/* ========== Flavour vertical block ========== */
-
-/*  Covers with image and text are shared with the
-shortcode defined in 'functions.php' and styled
-into the file 'planty-gout-shortcode.css' */
-
-.order-form .flavour .planty-gout-shortcode p {
-    margin-bottom: 6px;
-}
-
-.order-form .flavour .planty-gout-shortcode img {
     height: 129px;
+}
+
+#your-command .flavour .planty-gout-shortcode p {
+    margin-bottom: 6px;
 }
 
 /* ---------- Flavour order quantity ---------- */
 
-.order-form .flavour-quantity {
+#your-command .flavour-quantity {
     display: flex;
     flex-direction: row;
     justify-content: center;
     gap: 11px;
-    margin-bottom: 40px;
 }
 
-.order-form .quantity-field {
+#your-command .quantity-field {
     width: 82px;
     height: 56px;
     position: relative;
 }
 
-.order-form .wpcf7-form-control.qty-counter {
+#your-command .wpcf7-form-control.qty-counter {
     font-size: 16px;
     width: 82px;
     height: 56px;
@@ -766,7 +741,7 @@ into the file 'planty-gout-shortcode.css' */
 }
 
 /* Specific config. for '+' button */
-.order-form .small-btn.inc {
+#your-command .small-btn.inc {
     height: 27px;
     border-top-right-radius: 7px;
     top: 0;
@@ -774,43 +749,62 @@ into the file 'planty-gout-shortcode.css' */
 }
 
 /* Specific config. for '-' button */
-.order-form .small-btn.dec {
+#your-command .small-btn.dec {
     height: 28px;
     border-bottom-right-radius: 7px;
     right: 0;
     bottom: 0;
 }
 
+/* Spacing control with next section */
+#your-command .ok-button {
+    margin-bottom: 19px;
+}
+
 /*============================================*/
 /*  Sections "Vos Informations" & "Livraison"
 /*============================================*/
 
-.order-form .order-infos {
+#planty-order .order-form .order-infos {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    flex-wrap: wrap;
-    margin-bottom: 39px;
+    gap: 8px;
+    margin-top: 53px;
 }
 
-.order-form .field {
+#planty-order .order-infos .section-title {
+    margin-bottom: 29px;
+}
+
+#planty-order .order-form .field {
     text-align: left;
     font-size: 1em;
     color: var(--main-bg-color);
 }
 
-.order-form .field input {
+#planty-order .order-form .field input {
     height: 71px;
     border-radius: 7px;
     margin-top: 13px;
+}
+
+#planty-order .order-form .personal {
+    flex: 1;
     max-width: 383px;
 }
 
-/*-----------------------------------------
-Form global submit button
------------------------------------------*/
+#planty-order .order-form .delivery {
+    flex: 1;
+    max-width: 383px;
+}
+
+/*--------------------------------------------*/
+/*  Form global submit button
+/*--------------------------------------------*/
 
 .order-form #planty-form-submit-button {
+    margin-top: 23px;
     margin-bottom: -27px;
 }
 
@@ -858,12 +852,30 @@ Media queries
     
     /*========== Page "Commander" ==========*/
 
+    #planty-order .section-title {
+        text-align: center;
+    }
+    
     #your-command .flavour {
         flex-basis: 100%;
     }
 
-    #planty-order .vertical-separator {
-        display: none;
+    #planty-order .order-form .order-infos {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #planty-order .stretchable-separator {
+        width: 100%;
+        height: 1px;
+        align-self: stretch;
+        background-color: var(--main-bg-color);
+    }    
+    #planty-order .order-form .personal {
+        margin-bottom: 19px;
+    }
+    #planty-order .order-form .delivery {
+        margin-top: 53px;
     }
 }
 
@@ -900,11 +912,10 @@ Media queries
     }
     
     /*========== Page "Commander" ==========*/
+    #your-command .section-title {
+        text-align: center;
+    }
     #your-command .flavour {
         flex-basis: 50%;
-    }
-
-    #planty-order .vertical-separator {
-        display: none;
     }
 }

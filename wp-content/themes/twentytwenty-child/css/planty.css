@@ -231,7 +231,7 @@ Last menu item with child theme :hover */
     bottom: 0; 
     left: 0;
 }
-.primary-menu li:last-of-type a:hover:before {
+#site-header .primary-menu li:last-of-type a:hover:before {
     background-color: var(--clairet-color);
 }
 

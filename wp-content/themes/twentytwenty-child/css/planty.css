@@ -5,7 +5,7 @@ General settings
 ****************************************************/
 
 /*-----------------------------------------
-Planty colors & size
+Planty colors & body size
 -----------------------------------------*/
 
 /* CSS colors used from customized 'theme.json' */
@@ -27,17 +27,59 @@ body {
 }
 
 /*-----------------------------------------
-Override Twenty Twenty theme defaults
+Override some parent theme & CF7 defaults
 -----------------------------------------*/
 
 /* 'Syne' font applied to every elements */
-*, #page-title {
+*,
+#page-title {
     font-family: 'Syne', sans-serif;
 }
 
 .entry-content p {
     line-height: 1.2em;
     letter-spacing: normal;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.post-meta-edit-link-wrapper,
+main article header.entry-header,
+.site-description,
+.toggle-text,
+.wpcf7-spinner {
+    display: none;
+}
+
+/*-----------------------------------------
+Title of pages
+-----------------------------------------*/
+
+#page-title {
+    line-height: 45.6px;
+    letter-spacing: normal;
+}
+
+/*-----------------------------------------
+Bottom of sable color blocks
+-----------------------------------------*/
+
+.rounded-block-min {
+    border-bottom-right-radius: 50% 18px;
+    border-bottom-left-radius: 50% 18px;
+}
+.rounded-block-medium {
+    border-bottom-right-radius: 50% 58px;
+    border-bottom-left-radius: 50% 58px;
+}
+.rounded-block-max {
+    border-bottom-right-radius: 50% 72px;
+    border-bottom-left-radius: 50% 72px;
+}
+
+/* Shadow under block */
+.bottom-shadow {
+    border-bottom: 8px solid var(--ombre-color);
 }
 
 /*-----------------------------------------
@@ -92,46 +134,6 @@ Planty bottom image aka "guirlande"
 sable background last block of a page */
 .sable-background {
     background-color: var(--sable-color);
-}
-
-/*-----------------------------------------
-Planty custom blocks
-
-Class 'alignfull' added with Gutenberg in
-"CLASSE(S) CSS ADDITIONNELLE(S)" field when
-block has a filled background or need full
-width.
------------------------------------------*/
-
-/* Bottom of sable color blocks */
-.rounded-block-min {
-    border-bottom-right-radius: 50% 18px;
-    border-bottom-left-radius: 50% 18px;
-}
-.rounded-block-medium {
-    border-bottom-right-radius: 50% 58px;
-    border-bottom-left-radius: 50% 58px;
-}
-.rounded-block-max {
-    border-bottom-right-radius: 50% 72px;
-    border-bottom-left-radius: 50% 72px;
-}
-
-/* Shadow under sable color block */
-.bottom-shadow {
-    border-bottom: 8px solid var(--ombre-color);
-}
-
-/*-----------------------------------------
-Twenty Twenty theme & CF7 simplification
------------------------------------------*/
-
-.post-meta-edit-link-wrapper,
-main article header.entry-header,
-.site-description,
-.toggle-text,
-.wpcf7-spinner {
-    display: none;
 }
 
 /****************************************************
@@ -255,8 +257,6 @@ Page "Boisson énergisante naturelle"
 
 #cover-main #page-title {
     margin-top: 25px;
-    line-height: 45.6px;
-    letter-spacing: normal;
 }
 
 /*============================================*/
@@ -269,21 +269,21 @@ Page "Boisson énergisante naturelle"
 
 /*---------- Section decoration ----------*/
 
-#cover-main .cover img {
+#cover-main .cover-container img {
     margin: auto;
-    width: 57%;
+    width: 58%;
     height: auto;
     object-fit: contain;
 }
 
-#cover-main .cover figure {
+#cover-main .cover-container figure {
     max-width: 700px;
     position: relative;
     z-index: 0;
 }
 
 /* foliage on bottom left */
-#cover-main .cover figure::before {
+#cover-main .cover-container figure::before {
     content: '';
     position: absolute;
     z-index: -10;
@@ -298,7 +298,7 @@ Page "Boisson énergisante naturelle"
 }
 
 /* foliage on bottom right */
-#cover-main .cover figure::after {
+#cover-main .cover-container figure::after {
     content: '';
     position: absolute;
     z-index: -10;
@@ -333,11 +333,6 @@ Page "Boisson énergisante naturelle"
     margin-bottom: 82px;
 }
 
-#flower-power .container p {
-    margin-top: 0;
-    margin-bottom: 0;
-}
-
 /*============================================*/
 /*  Section "LES GOÛTS"
 /*============================================*/
@@ -349,7 +344,7 @@ Page "Boisson énergisante naturelle"
 /*---------- Section title & subtitle ----------*/
 
 #planty-flavours .planty-title {
-    margin-top: 18px;
+    margin-top: -22px;
     margin-bottom: 7px;
     line-height: normal;
     letter-spacing: normal;
@@ -357,8 +352,7 @@ Page "Boisson énergisante naturelle"
 }
 
 #planty-flavours p {
-    margin-top: 0;
-    margin-bottom: 49px;
+    margin-bottom: 48px;
 }
 
 /*---------- Available flavours ----------*/
@@ -369,7 +363,7 @@ Page "Boisson énergisante naturelle"
     gap: 30px;
 }
 
-.flavours .planty-gout-shortcode {
+#planty-flavours .flavours .planty-gout-shortcode {
     margin-bottom: 10px;
 }
 
@@ -395,11 +389,11 @@ Page "Boisson énergisante naturelle"
 }
 
 #testimonials .customer-testimonials .customer-testimonial {
-    max-width: 360px;
+    max-width: 380px;
     margin-top: 0;
     margin-bottom: 0;
     padding-right: 0;
-    padding-left: 0;
+    padding-left: 12px;
     gap: 23px;
 }
 
@@ -431,8 +425,6 @@ Page "Contacter équipe Planty"
 
 #meet-planty #page-title {
     margin-top: 106px;
-    line-height: 45.6px;
-    letter-spacing: normal;
 }
 
 /*============================================*/
@@ -469,11 +461,6 @@ Page "Contacter équipe Planty"
     margin-bottom: -3px;
 }
 
-#meet-planty .container p {
-    margin-top: 0;
-    margin-bottom: 0;
-}
-
 /*============================================*/
 /*  Section "L'équipe"
 /*============================================*/
@@ -496,7 +483,7 @@ Page "Contacter équipe Planty"
 }
 
 .planty-members .planty-member {
-    max-width: 300px;
+    max-width: 285px;
 }
 
 .planty-members .planty-member figure {
@@ -510,7 +497,6 @@ Page "Contacter équipe Planty"
 .planty-members .planty-member p {
     line-height: normal;
     margin-top: 11px;
-    margin-bottom: 0;
 }
 
 /*---------- Section decoration ----------*/
@@ -527,7 +513,7 @@ Page "Contacter équipe Planty"
     z-index: -10;
     width: 191px;
     height: 100%;
-    right: 59px;
+    right: 58.8px;
     bottom: 0;
     background-image: url('../img/feuilles-g.svg');
     background-repeat: no-repeat;
@@ -538,10 +524,6 @@ Page "Contacter équipe Planty"
 /*============================================*/
 /*  Section "Nous contacter"
 /*============================================*/
-
-#contact-planty {
-    padding-bottom: 49px;
-}
 
 /*---------- Section title ----------*/
 
@@ -557,25 +539,25 @@ Page "Contacter équipe Planty"
 #contact-planty .contact-form {
     max-width: 383px;
     margin-top: 45px;
-    margin-bottom: 24px;
+    margin-bottom: -7px;
     text-align: center;
 }
 
-.contact-form .field {
+#contact-planty .contact-form .field {
     text-align: left;
     font-size: 1em;
     position: relative;
     z-index: 0;
 }
 
-.contact-form .field input {
+#contact-planty .contact-form .field input {
     height: 71px;
     border-radius: 7px;
     margin-top: 13px;
     margin-bottom: 22px;
 }
 
-.contact-form .field textarea {
+#contact-planty .contact-form .field textarea {
     height: 237px;
     border-radius: 7px;
     margin-top: 13px;
@@ -584,7 +566,7 @@ Page "Contacter équipe Planty"
 
 /*---------- Section decoration ----------*/
 
-.contact-form .field.decoration::before {
+#contact-planty .contact-form .field.decoration::before {
     content: '';
     position: absolute;
     z-index: -10;
@@ -608,13 +590,11 @@ Page "Contacter équipe Planty"
 Page "Commander"
 ****************************************************/
 
+/* ========== Planty Order ========== */
+
 #planty-order {
     margin-bottom: 0;
 }
-
-/*============================================*/
-/*  Components
-/*============================================*/
 
 /* ========== Separators ========== */
 
@@ -672,14 +652,7 @@ Page "Commander"
 
 #planty-order #page-title {
     margin-top: -11px;
-    line-height: 45.6px;
-    letter-spacing: normal;
     margin-bottom: 69px;
-}
-
-#planty-order .order-form {
-    max-width: 860px;
-    text-align: center;
 }
 
 #planty-order .section-title {
@@ -687,6 +660,11 @@ Page "Commander"
     font-weight: 700;
     text-align: left;
     color: var(--main-bg-color);
+}
+
+#planty-order .order-form {
+    max-width: 860px;
+    text-align: center;
 }
 
 /*============================================*/
@@ -729,7 +707,7 @@ Page "Commander"
     gap: 11px;
 }
 
-#your-command .quantity-field {
+#your-command .quantity-container {
     width: 82px;
     height: 56px;
     position: relative;
@@ -761,55 +739,56 @@ Page "Commander"
     bottom: 0;
 }
 
-/* Spacing control with next section */
+/* Spacing control with nex sections */
 #your-command .ok-button {
-    margin-bottom: 19px;
+    margin-bottom: 40px;
 }
 
 /*============================================*/
 /*  Sections "Vos Informations" & "Livraison"
 /*============================================*/
 
-#planty-order .order-form .order-infos {
+/* ========== Customer order infos ========== */
+
+#order-infos {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    gap: 8px;
+    gap: 12px;
     margin-top: 53px;
 }
 
-#planty-order .order-infos .section-title {
+#order-infos .personal,
+#order-infos .delivery {
+    flex: 1;
+    max-width: 383px;
+}
+
+#order-infos .section-title {
     margin-bottom: 29px;
 }
 
-#planty-order .order-form .field {
+/* ========== Form settings ========== */
+
+#planty-order #order-infos .field {
     text-align: left;
     font-size: 1em;
     color: var(--main-bg-color);
 }
 
-#planty-order .order-form .field input {
+#planty-order #order-infos .field input {
     height: 71px;
     border-radius: 7px;
     margin-top: 13px;
+    margin-bottom: 30px;
 }
 
-#planty-order .order-form .personal {
-    flex: 1;
-    max-width: 383px;
-}
-
-#planty-order .order-form .delivery {
-    flex: 1;
-    max-width: 383px;
-}
-
-/*--------------------------------------------*/
-/*  Form global submit button
-/*--------------------------------------------*/
+/*============================================*/
+/*  Order form global submit button
+/*============================================*/
 
 .order-form #planty-form-submit-button {
-    margin-top: 23px;
+    margin-top: 14px;
     margin-bottom: -27px;
 }
 
@@ -836,6 +815,11 @@ Media queries
     #planty-guirlande figure {
         height: 91px;
     }
+
+    #contact-planty .contact-form .field input,    #planty-order #order-infos .field input {
+        height: 61px;
+        margin-top: 11px;
+    }    
     
     /*========== Page "Contacter équipe Planty" ==========*/
     #meet-planty::before {
@@ -856,34 +840,28 @@ Media queries
     }
     
     /*========== Page "Commander" ==========*/
-
     #planty-order .section-title {
         text-align: center;
     }
-    
     #your-command .flavour {
         flex-basis: 100%;
     }
     #your-command .flavour .planty-gout-shortcode img {
-        width: 293px;
-
+        width: 273px;
     }
     
-    #planty-order .order-form .order-infos {
+    #order-infos {
         flex-direction: column;
         align-items: center;
     }
-
-    #planty-order .stretchable-separator {
-        width: 100%;
-        height: 1px;
-        align-self: stretch;
-        background-color: var(--main-bg-color);
-    }    
-    #planty-order .order-form .personal {
+    #order-infos .personal {
         margin-bottom: 19px;
     }
-    #planty-order .order-form .delivery {
+    #order-infos .stretchable-separator {
+        width: 100%;
+        height: 1px;
+    }    
+    #order-infos .delivery {
         margin-top: 32px;
     }
 }
@@ -928,6 +906,6 @@ Media queries
         flex-basis: 50%;
     }
     #your-command .flavour .planty-gout-shortcode img {
-        width: 243px;
+        width: 293px;
     }
 }

@@ -608,6 +608,10 @@ Page "Contacter équipe Planty"
 Page "Commander"
 ****************************************************/
 
+#planty-order {
+    margin-bottom: 0;
+}
+
 /*============================================*/
 /*  Components
 /*============================================*/
@@ -622,6 +626,7 @@ Page "Commander"
 
 #planty-order .stretchable-separator {
     width: 1px;
+    margin-bottom: 21px;
     align-self: stretch;
     background-color: var(--main-bg-color);
 }
@@ -708,7 +713,7 @@ Page "Commander"
 
 #your-command .flavour .planty-gout-shortcode img {
     width: 193px;
-    height: 129px;
+    height: 100%;
 }
 
 #your-command .flavour .planty-gout-shortcode p {
@@ -859,7 +864,11 @@ Media queries
     #your-command .flavour {
         flex-basis: 100%;
     }
+    #your-command .flavour .planty-gout-shortcode img {
+        width: 293px;
 
+    }
+    
     #planty-order .order-form .order-infos {
         flex-direction: column;
         align-items: center;
@@ -875,7 +884,7 @@ Media queries
         margin-bottom: 19px;
     }
     #planty-order .order-form .delivery {
-        margin-top: 53px;
+        margin-top: 32px;
     }
 }
 
@@ -917,5 +926,8 @@ Media queries
     }
     #your-command .flavour {
         flex-basis: 50%;
+    }
+    #your-command .flavour .planty-gout-shortcode img {
+        width: 243px;
     }
 }

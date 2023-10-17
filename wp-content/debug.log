@@ -90,3 +90,4 @@ Stack trace:
 [13-Oct-2023 06:05:10 UTC] PHP Notice:  Undefined index: title in /Applications/MAMP/htdocs/Planty/wp-content/themes/twentytwenty-child/widgets/planty-gout-widget.php on line 25
 [13-Oct-2023 06:05:10 UTC] PHP Notice:  Undefined index: text_size in /Applications/MAMP/htdocs/Planty/wp-content/themes/twentytwenty-child/widgets/planty-gout-widget.php on line 27
 [13-Oct-2023 06:05:10 UTC] PHP Notice:  Undefined index: url_image in /Applications/MAMP/htdocs/Planty/wp-content/themes/twentytwenty-child/widgets/planty-gout-widget.php on line 28
+[17-Oct-2023 05:46:04 UTC] Erreur d’événement de replanification de tâche pour le crochet wp_privacy_delete_old_export_files. Code d’erreur : could_not_set. Message d’erreur : La liste des évènements planifiés n’a pas pu être sauvegardée.. Données : {"schedule":"hourly","args":[],"interval":3600}

@@ -780,7 +780,7 @@ Page "Commander"
     height: 71px;
     border-radius: 7px;
     margin-top: 13px;
-    margin-bottom: 30px;
+    margin-bottom: 22px;
 }
 
 /*============================================*/
@@ -799,6 +799,14 @@ Media queries
 @media screen and (max-width: 699px) {
     
     /*========== Common ==========*/
+    #cover-main #page-title,
+    #meet-planty #page-title,
+    #planty-order #page-title {
+        margin-top: 32px;
+        font-size: 1.2em !important;
+        margin-bottom: 16px;
+    }
+
     .rounded-block-min {
         border-bottom-right-radius: 50% 9px;
         border-bottom-left-radius: 50% 9px;
